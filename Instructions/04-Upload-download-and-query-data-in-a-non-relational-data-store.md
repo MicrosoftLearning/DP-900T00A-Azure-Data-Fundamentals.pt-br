@@ -1,17 +1,16 @@
 ---
 lab:
-    title: 'Laboratório 04: Carregar, baixar e consultar dados em um armazenamento de dados não relacional'
-    module: 'Módulo 03: Explorar dados não relacionais no Azure'
+  title: 'Laboratório 02: Carregar, baixar e consultar dados em um armazenamento de dados não relacional'
+  module: 'Module 03: Explore non-relational data in Azure'
+ms.openlocfilehash: 6787cb8209df227b97ad74a000bc5906740344d7
+ms.sourcegitcommit: 32d1de2c37267f8d3cedb0f0064b08be2cde5bb7
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/04/2022
+ms.locfileid: "139267716"
 ---
+## <a name="instructions"></a>Instruções
 
-## Instruções
-No cenário de exemplo, digamos que você tenha criado os seguintes armazenamentos de dados:
+Neste exercício, você vai explorar o Azure Cosmos DB.
 
-Um Cosmos DB para informações sobre os produtos que a Contoso fabrica.
-Um contêiner de blob no Armazenamento do Azure para manter as imagens dos produtos.
-Um compartilhamento de arquivo, na mesma conta de Armazenamento do Azure, para a documentação dos produtos.
-Neste exercício, você vai carregar dados nesses armazenamentos de dados. Você vai executar consultas em relação aos dados no banco de dados Cosmos DB. Por fim, você vai baixar e visualizar as imagens e os documentos mantidos no Armazenamento do Azure.
-
-Para executar o exercício, use o portal do Azure e a linha de comando.
-
-1.	Acesse o exercício do Microsoft Learn em https://aka.ms/dp900lab04-ptb e conclua a unidade no navegador: 
+1.  Acesse o exercício do Microsoft Learn em https://docs.microsoft.com/learn/modules/explore-non-relational-data-stores-azure/4-exercise-explore-cosmos-db e conclua a unidade no navegador: 
