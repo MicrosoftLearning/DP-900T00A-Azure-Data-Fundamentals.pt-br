@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: d886b438a93762235ecd051230f873dae1b674ce
-ms.sourcegitcommit: 1117342052bce0bbd5a703bd1f763862b9129807
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2022
-ms.locfileid: "140682433"
----
 # <a name="dp-900-trainer-lab-mapping"></a>Mapa do laboratório de treinamento do DP-900
 
 Este curso, DP-900: Microsoft Azure Data Fundamentals, tem um conjunto de laboratórios designados para treinamento com instrutor. 
