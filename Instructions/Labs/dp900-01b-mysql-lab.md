@@ -20,7 +20,7 @@ Neste exercício, você provisionará um recurso do Banco de Dados do Azure para
 
 1. In the Azure portal, select <bpt id="p1">**</bpt>&amp;#65291; Create a resource<ept id="p1">**</ept> from the upper left-hand corner and search for <bpt id="p2">*</bpt>Azure Database for MySQL<ept id="p2">*</ept>. Then in the resulting <bpt id="p1">**</bpt>Azure Database for MySQL<ept id="p1">**</ept> page, select <bpt id="p2">**</bpt>Create<ept id="p2">**</ept>.
 
-1. Review the Azure Database for MySQL options that are available. Then for <bpt id="p1">**</bpt>Resource type<ept id="p1">**</ept>, select <bpt id="p2">**</bpt>Flexible Server<ept id="p2">**</ept> and select <bpt id="p3">**</bpt>Create<ept id="p3">**</ept>.
+1. Revise as opções do Banco de Dados do Azure para MySQL disponíveis, deixe o **Tipo de recurso** como está e selecione **Criar**.
 
     ![Captura de tela das opções de implantação do Banco de Dados do Azure para MySQL](images/mysql-options.png)
 

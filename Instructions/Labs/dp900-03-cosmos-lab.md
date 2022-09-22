@@ -1,9 +1,9 @@
 ---
 lab:
-  title: Explorar o Azure Cosmos DB
+  title: Explorar dados não relacionais no Azure com o Azure Cosmos DB
   module: Explore fundamentals of Azure Cosmos DB
 ---
-# <a name="explore-azure-cosmos-db"></a>Explorar o Azure Cosmos DB
+# <a name="explore-non-relational-data-in-azure-with-azure-cosmos-db"></a>Explorar dados não relacionais no Azure com o Azure Cosmos DB
 
 Neste exercício, você vai provisionar um banco de dados do Azure Cosmos DB na assinatura do Azure e explorar as várias maneiras de usá-lo para armazenar dados não relacionais.
 
