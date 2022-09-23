@@ -1,10 +1,10 @@
 ---
 lab:
-  title: Explorar o Armazenamento do Azure
+  title: Explorar dados não relacionais no Azure com o Armazenamento do Azure
   module: Explore Azure Storage for non-relational data
 ---
 
-# <a name="explore-azure-storage"></a>Explorar o Armazenamento do Azure
+# <a name="explore-non-relational-data-in-azure-with-azure-storage"></a>Explorar dados não relacionais no Azure com o Armazenamento do Azure
 
 Neste exercício, você vai provisionar uma conta do Armazenamento do Azure na assinatura do Azure e explorar as várias maneiras de usá-la para armazenar dados.
 
