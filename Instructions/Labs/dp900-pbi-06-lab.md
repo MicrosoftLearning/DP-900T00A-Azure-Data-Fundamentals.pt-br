@@ -19,11 +19,11 @@ Este laboratório levará aproximadamente **20** minutos para ser concluído.
 Se o Microsoft Power BI Desktop ainda não estiver instalado em seu computador Windows, você poderá baixá-lo e instalá-lo gratuitamente.
 
 1. Baixe o instalador do Power BI Desktop de [https://aka.ms/power-bi-desktop](https://aka.ms/power-bi-desktop?azure-portal=true).
-1. When the file has downloaded, open it, and use the setup wizard to install Power BI Desktop on your computer. This insatllation may take a few minutes.
+1. Quando o arquivo for baixado, abra-o e use o assistente de configuração para instalar o Power BI Desktop em seu computador. Esta instalação pode levar alguns minutos.
 
 ## <a name="import-data"></a>Importar dados
 
-1. Open Power BI Desktop. The application interface should look similar to this:
+1. Abra o Power BI Desktop. A interface do aplicativo deve ser semelhante a esta:
 
     ![Captura de tela mostrando a tela inicial do Power BI Desktop.](images/power-bi-start.png)
 
@@ -41,7 +41,7 @@ Se o Microsoft Power BI Desktop ainda não estiver instalado em seu computador W
 
 1. Na caixa de diálogo “Acessar conteúdo da Web”, selecione **Conectar**.
 
-1. Verify that the URL opens a dataset containing customer data, as shown below. Then select <bpt id="p1">**</bpt>Load<ept id="p1">**</ept> to load the data into the data model for your report.
+1. Verifique se a URL abre um conjunto de dados que contém os dados do cliente, conforme mostrado abaixo. Em seguida, selecione **Carregar** para carregar os dados no modelo de dados para seu relatório.
 
     ![Captura de tela mostrando um conjunto de dados de clientes exibido no Power BI.](images/customers.png)
 
@@ -67,7 +67,7 @@ Se o Microsoft Power BI Desktop ainda não estiver instalado em seu computador W
 
 As três tabelas de dados que você importou foram carregadas em um modelo de dados, que agora você explorará e refinará.
 
-1. In Power BI Desktop, on the left-side edge, select the <bpt id="p1">**</bpt>Model<ept id="p1">**</ept> tab, and then arrange the tables in the model so you can see them. You can hide the panes on the right side by using the <bpt id="p1">**</bpt><ph id="ph1">&gt;&gt;</ph><ept id="p1">**</ept> icons:
+1. No Power BI Desktop, na borda esquerda, selecione a guia **Modelo** e organize as tabelas no modelo para que seja possível vê-las. É possível ocultar os painéis no lado direito usando os ícones **>>** :
 
     ![Captura de tela mostrando a guia Modelo no Power BI.](images/model-tab.png)
 
@@ -77,12 +77,12 @@ As três tabelas de dados que você importou foram carregadas em um modelo de da
 
     Esta etapa garante que os valores de receita sejam exibidos como moeda nas visualizações de relatórios.
 
-1. In the products table, right-click the <bpt id="p1">**</bpt>Category<ept id="p1">**</ept> field (or open its <bpt id="p2">**</bpt><ph id="ph1">&amp;vellip;</ph><ept id="p2">**</ept> menu) and select <bpt id="p3">**</bpt>Create hierarchy<ept id="p3">**</ept>. This step creates a hierarchy named <bpt id="p1">**</bpt>Category Hierarchy<ept id="p1">**</ept>. You may need to expand or scroll in the <bpt id="p1">**</bpt>products<ept id="p1">**</ept> table to see this - you can also see it in the <bpt id="p2">**</bpt>Fields<ept id="p2">**</ept> pane:
+1. Na tabela de produtos, clique com o botão direito do mouse no campo **Categoria** (ou abra o respectivo menu **&vellip;** ) e selecione **Criar hierarquia**. Esta etapa cria uma hierarquia chamada **Hierarquia de categorias**. Pode ser necessário expandir ou rolar para baixo a tabela de **produtos** para vê-la, mas também é possível exibi-la no painel **Campos**:
 
     ![Captura de tela mostrando como adicionar a hierarquia de categorias no Power BI.](images/category-hierarchy.png)
 
-1. In the products table, right-click the <bpt id="p1">**</bpt>ProductName<ept id="p1">**</ept> field (or open its <bpt id="p2">**</bpt><ph id="ph1">&amp;vellip;</ph><ept id="p2">**</ept> menu) and select <bpt id="p3">**</bpt>Add to hierarchy<ept id="p3">**</ept><ph id="ph2"> &gt; </ph><bpt id="p4">**</bpt>Category Hierarchy<ept id="p4">**</ept>. This adds the <bpt id="p1">**</bpt>ProductName<ept id="p1">**</ept> field to the hierarchy you created previously.
-1. In the <bpt id="p1">**</bpt>Fields<ept id="p1">**</ept> pane, right-click <bpt id="p2">**</bpt>Category Hierarchy<ept id="p2">**</ept> (or open its <bpt id="p3">**</bpt>...<ept id="p3">**</ept> menu) and select <bpt id="p4">**</bpt>Rename<ept id="p4">**</ept>. Then rename the hierarchy to <bpt id="p1">**</bpt>Categorized Product<ept id="p1">**</ept>.
+1. Na tabela de produtos, clique com o botão direito do mouse no campo **ProductName** (ou abra o respectivo menu **&vellip;** ) e selecione **Adicionar à hierarquia** > **Hierarquia de categorias**. Isso adiciona o campo **NomeDoProduto** à hierarquia que você criou anteriormente.
+1. No painel **Campos**, clique com o botão direito do mouse em **Hierarquia de Categoria** (ou abra seu menu **...**) e selecione **Renomear**. Renomeie a hierarquia para **Produto categorizado**.
 
     ![Captura de tela mostrando como renomear a hierarquia no Power BI.](images/rename-hierarchy.png)
 
@@ -95,9 +95,9 @@ As três tabelas de dados que você importou foram carregadas em um modelo de da
 
 ## <a name="create-a-report"></a>Criar um relatório
 
-Now you're almost ready to create a report. First you need to check some settings to ensure all visualizations are enabled.
+Agora você está quase pronto para criar um relatório. Primeiro, você precisará verificar algumas configurações para garantir que todas as visualizações estejam habilitadas.
 
-1. On the <bpt id="p1">**</bpt>File<ept id="p1">**</ept> menu, select <bpt id="p2">**</bpt>Options and Settings<ept id="p2">**</ept>. Then select <bpt id="p1">**</bpt>Options<ept id="p1">**</ept>, and in the <bpt id="p2">**</bpt>Security<ept id="p2">**</ept> section, ensure that <bpt id="p3">**</bpt>Use Map and Filled Map visuals<ept id="p3">**</ept> is enabled and select <bpt id="p4">**</bpt>OK<ept id="p4">**</ept>.
+1. No menu **Arquivo**, selecione **Opções e Configurações**. Em seguida, selecione **Opções** e, na seção **Segurança**, verifique se a opção **Usar elementos visuais de Mapa e Mapa Preenchido** está habilitada e selecione **OK**.
 
     ![Captura de tela mostrando como definir a propriedade dos visuais Usar mapa e Mapa preenchido no PowerBI.](images/set-options.png)
 
@@ -107,42 +107,42 @@ Now you're almost ready to create a report. First you need to check some setting
 
     ![Captura de tela mostrando a guia de relatório no Power BI.](images/report-tab.png)
 
-1. In the ribbon, above the report design surface, select <bpt id="p1">**</bpt>Text Box<ept id="p1">**</ept> and add a text box containing the text <bpt id="p2">**</bpt>Sales Report<ept id="p2">**</ept> to the report. Format the text to make it bold with a font size of 32.
+1. Na faixa de opções, acima da superfície de design do relatório, selecione **Caixa de Texto** e adicione uma caixa de texto com o texto **Relatório de Vendas** ao relatório. Formate o texto com negrito e um tamanho de fonte 32.
 
     ![Captura de tela mostrando como adicionar uma caixa de texto no Power BI.](images/text-box.png)
 
-1. Quando o arquivo for baixado, abra-o e use o assistente de configuração para instalar o Power BI Desktop em seu computador.
+1. Selecione qualquer área vazia no relatório para desmarcar a caixa de texto. Em seguida, no painel **Campos**, expanda **Produtos** e selecione o campo **Produtos Categorizados**. Esta etapa adiciona uma tabela ao relatório.
 
     ![Captura de tela mostrando como adicionar uma tabela de produtos categorizados a um relatório no Power BI.](images/categorized-products-table.png)
 
-1. Esta instalação pode levar alguns minutos.
+1. Com a tabela ainda selecionada, no painel **Campos**, expanda **Pedidos** e selecione **Receita**. Uma coluna Receita é adicionada à tabela. Pode ser necessário expandir o tamanho da tabela para vê-la.
 
-    The revenue is formatted as currency, as you specified in the model. However, you didn't specify the number of decimal places, so the values include fractional amounts. It won't matter for the visualizations you're going to create, but you could go back to the <bpt id="p1">**</bpt>Model<ept id="p1">**</ept> or <bpt id="p2">**</bpt>Data<ept id="p2">**</ept> tab and change the decimal places if you wish.
+    A receita é formatada como moeda, como você especificou no modelo. No entanto, você não especificou o número de casas decimais e, portanto, os valores incluem valores fracionários. Isso não será importante para as visualizações criadas, mas você poderá voltar à guia **Modelo** ou **Dados** e alterar as casas decimais, se desejar.
 
     ![Captura de tela mostrando uma tabela de produtos categorizados com receita em um relatório.](images/revenue-column.png)
 
-1. With the table still selected, in the <bpt id="p1">**</bpt>Visualizations<ept id="p1">**</ept> pane, select the <bpt id="p2">**</bpt>Stacked column chart<ept id="p2">**</ept> visualization. The table is changed to a column chart showing revenue by category.
+1. Com a tabela ainda selecionada, no painel **Visualizações**, selecione a visualização **Gráfico de colunas empilhadas**. A tabela é alterada para um gráfico de colunas mostrando receita por categoria.
 
     ![Captura de tela mostrando um gráfico de colunas empilhadas de produtos categorizados com receita em um relatório.](images/stacked-column-chart.png)
 
-1. Abra o Power BI Desktop.
+1. Acima do gráfico de colunas selecionado, selecione o ícone **&#8595;** para ativar o drill-down. Em seguida, no gráfico, selecione a segunda coluna (*Bicicletas de Estrada*) para fazer uma busca detalhada e ver a receita dos produtos individuais nesta categoria. Essa funcionalidade é possível porque você definiu uma hierarquia de categorias e produtos.
 
     ![Captura de tela mostrando um gráfico de colunas com drill-down aplicado para ver os produtos em uma categoria.](images/drill-down.png)
 
-1. A interface do aplicativo deve ser semelhante a esta:
-1. Select a blank area of the report, and then in the <bpt id="p1">**</bpt>Fields<ept id="p1">**</ept> pane, select the <bpt id="p2">**</bpt>Quantity<ept id="p2">**</ept> field in the <bpt id="p3">**</bpt>orders<ept id="p3">**</ept> table and the <bpt id="p4">**</bpt>Category<ept id="p4">**</ept> field in the <bpt id="p5">**</bpt>products<ept id="p5">**</ept> table. This step results in another column chart showing sales quantity by product category.
+1. Use o ícone **&#x2191;** para fazer drill-up para o nível da categoria. Em seguida, selecione o ícone **(** &#8595; **)** para desativar o recurso de drill-down.
+1. Selecione uma área em branco do relatório e, no painel **Campos**, selecione o campo **Quantidade** na tabela **Pedidos** e o campo **Categoria** na tabela **produtos**. Essa etapa resulta em outro gráfico de colunas mostrando a quantidade de vendas por categoria de produto.
 1. Com o novo gráfico de colunas selecionado, no painel **Visualizações**, selecione **Gráfico de pizza** e redimensione o gráfico e posicione-o ao lado do gráfico de colunas receita por categoria.
 
     ![Captura de tela mostrando um gráfico de pizza que exibe a quantidade de vendas por categoria.](images/category-pie-chart.png)
 
-1. Select a blank area of the report, and then in the <bpt id="p1">**</bpt>Fields<ept id="p1">**</ept> pane, select the <bpt id="p2">**</bpt>City<ept id="p2">**</ept> field in the <bpt id="p3">**</bpt>customers<ept id="p3">**</ept> table and then select the <bpt id="p4">**</bpt>Revenue<ept id="p4">**</ept> field in the <bpt id="p5">**</bpt>orders<ept id="p5">**</ept> table. This results in a map showing sales revenue by city. Rearrange and resize the visualizations as needed:
+1. Selecione uma área em branco do relatório e, no painel **Campos**, selecione o campo **Cidade** na tabela **clientes** e, em seguida, selecione o campo **Receita** na tabela **pedidos**. Isso resulta em um mapa que mostra a receita de vendas por cidade. Reorganize e redimensione as visualizações conforme necessário:
 
     ![Captura de tela mostrando um mapa que exibe a receita por cidade.](images/revenue-map.png)
 
-1. In the map, note that you can drag, double-click, use a mouse-wheel, or pinch and drag on a touch screen to interact. Then select a specific city, and note that the other visualizations in the report are modified to highlight the data for the selected city.
+1. No mapa, observe que você pode arrastar, clicar duas vezes, usar uma roda do mouse ou pinçar e arrastar uma tela sensível ao toque para interagir. Em seguida, selecione uma cidade específica e observe que as outras visualizações no relatório são modificadas para realçar os dados da cidade selecionada.
 
     ![Captura de tela mostrando um mapa que exibe a receita por cidade, realçando os dados da cidade selecionada.](images/selected-data.png)
 
-1. On the <bpt id="p1">**</bpt>File<ept id="p1">**</ept> menu, select <bpt id="p2">**</bpt>Save<ept id="p2">**</ept>. Then save the file with an appropriate .pbix file name. You can open the file and explore data modeling and visualization further at your leisure.
+1. No menu **Arquivo**, selecione **Salvar**. Em seguida, salve o arquivo com um nome de arquivo. pbix apropriado. Você pode abrir o arquivo e explorar ainda mais a modelagem de dados e a visualização como quiser.
 
 Com uma assinatura do [serviço do Power BI](https://www.powerbi.com/?azure-portal=true), é possível entrar em sua conta e publicar o relatório em um workspace do Power BI. 

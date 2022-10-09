@@ -16,7 +16,7 @@ Este laboratório levará aproximadamente **15** minutos para ser concluído.
 
 ## <a name="provision-an-azure-sql-database-resource"></a>Provisionar um recurso do Banco de Dados SQL do Azure
 
-1. In the <bpt id="p1">[</bpt>Azure portal<ept id="p1">](https://portal.azure.com?azure-portal=true)</ept>, select <bpt id="p2">**</bpt>&amp;#65291; Create a resource<ept id="p2">**</ept> from the upper left-hand corner and search for <bpt id="p3">*</bpt>Azure SQL<ept id="p3">*</ept>. Then in the resulting <bpt id="p1">**</bpt>Azure SQL<ept id="p1">**</ept> page, select <bpt id="p2">**</bpt>Create<ept id="p2">**</ept>.
+1. No [Portal do Azure](https://portal.azure.com?azure-portal=true), selecione **&#65291; Criar recurso** no canto superior esquerdo e pesquise *SQL do Azure*. Em seguida, na página **SQL do Azure** resultante, selecione **Criar**.
 
 1. Examine as opções de SQL do Azure que estão disponíveis e, em seguida, no bloco **Bancos de dados SQL**, verifique se a opção **Banco de dados individual** está selecionada e escolha **Criar**.
 
@@ -26,12 +26,12 @@ Este laboratório levará aproximadamente **15** minutos para ser concluído.
     - **Assinatura**: Selecione sua assinatura do Azure.
     - **Grupo de recursos**: crie um grupo de recursos com um nome de sua escolha.
     - **Nome do banco de dados**: *AdventureWorks*
-    - <bpt id="p1">**</bpt>Server<ept id="p1">**</ept>:  Select <bpt id="p2">**</bpt>Create new<ept id="p2">**</ept> and create a new server with a unique name in any available location. Use <bpt id="p1">**</bpt>SQL authentication<ept id="p1">**</ept> and specify your name as the server admin login and a suitably complex password (remember the password - you'll need it later!)
+    -                 **Servidor**: selecione **Criar novo** e crie um servidor com um nome exclusivo em qualquer local disponível. Use **Autenticação de SQL** e especifique seu nome como o logon de administrador do servidor e uma senha devidamente complexa (lembre-se da senha, você precisará dela mais tarde).
     - **Deseja usar o pool elástico do SQL?**: *Não*
     - **Computação + armazenamento**: deixar inalterado
     - **Redundância de armazenamento de backup**: *Armazenamento de backup com redundância local*
 
-1. On the <bpt id="p1">**</bpt>Create SQL Database<ept id="p1">**</ept> page, select <bpt id="p2">**</bpt>Next :Networking &gt;<ept id="p2">**</ept>, and on the <bpt id="p3">**</bpt>Networking<ept id="p3">**</ept> page, in the <bpt id="p4">**</bpt>Network connectivity<ept id="p4">**</ept> section, select <bpt id="p5">**</bpt>Public endpoint<ept id="p5">**</ept>. Then select <bpt id="p1">**</bpt>Yes<ept id="p1">**</ept> for both options in the <bpt id="p2">**</bpt>Firewall rules<ept id="p2">**</ept> section to allow access to your database server from Azure services and your current client IP address.
+1. Na página **Criar Banco de Dados SQL**, selecione **Avançar: Redes >** e, na página **Redes**, na seção **Conectividade de rede**, selecione **Ponto de extremidade público**. Em seguida, selecione **Sim** para ambas as opções na seção **Regras de firewall** para permitir o acesso ao servidor de banco de dados por meio dos serviços do Azure e do seu endereço IP de cliente atual.
 
 1. Selecione **Avançar: Segurança >** e configure a opção **Habilitar Microsoft Defender para SQL** como **Não agora**.
 
@@ -39,7 +39,7 @@ Este laboratório levará aproximadamente **15** minutos para ser concluído.
 
 1. Selecione **Examinar + Criar** e depois **Criar** para criar o Banco de Dados SQL do Azure.
 
-1. Wait for deployment to complete. Then go to the resource that was deployed, which should look like this:
+1. Aguarde o fim da implantação. Em seguida, acesse o recurso que foi implantado, que deve ter essa aparência:
 
     ![Captura de tela do portal do Azure mostrando a página do Banco de Dados SQL.](images//sql-database-portal.png)
 

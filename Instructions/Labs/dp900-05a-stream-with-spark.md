@@ -20,7 +20,7 @@ Para usar o Synapse Analytics, você deve provisionar um recurso de workspace do
 
 1. Abra o portal do Azure em [Portal do Azure](https://portal.azure.com?azure-portal=true) e entre usando as credenciais associadas a sua assinatura do Azure.
 
-    > <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Ensure you are working in the directory containing your own subscription - indicated at the top right under your user ID. If not, select the user icon and switch directory.
+    >                 **Observação**: verifique se você está trabalhando no diretório que contém a sua própria assinatura (indicado no canto superior direito embaixo da sua ID de usuário). Caso contrário, selecione o ícone de usuário e o troque o diretório.
 
 2. Na portal do Azure, na **Página Inicial**, use o ícone **&#65291; Criar um recurso** para criar um recurso.
 3. Pesquise por *Azure Synapse Analytics* e crie um recurso do **Azure Synapse Analytics** com as seguintes configurações:
@@ -33,7 +33,7 @@ Para usar o Synapse Analytics, você deve provisionar um recurso de workspace do
         - **Nome da conta**: *Crie conta com um nome exclusivo, por exemplo, "datalake<seu_nome>"*.
         - **Nome do sistema de arquivos**: *Crie um sistema de arquivos com um nome exclusivo, por exemplo "fs<seu_nome>"*.
 
-    > <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: A Synapse Analytics workspace requires two resource groups in your Azure subscription; one for resources you explicitly create, and another for managed resources used by the service. It also requires a Data Lake storage account in which to store data, scripts, and other artifacts.
+    >                 **Observação**: um workspace do Synapse Analytics requer dois grupos de recursos na assinatura do Azure: um para recursos criados explicitamente e outro para recursos gerenciados que são usados ​​pelo serviço. Ele também requer uma conta de armazenamento de Data Lake para armazenar dados, scripts e outros artefatos.
 
 4. Depois de inserir esses detalhes, selecione **Revisar + criar** e selecione **Criar** para criar o workspace.
 5. Aguarde a criação do workspace, isso levará cerca de cinco minutos.
@@ -67,7 +67,7 @@ Para explorar o processamento de fluxo com o Spark, você usará um notebook que
 
 ## <a name="delete-azure-resources"></a>Excluir recursos do Azure
 
-> <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: If you intend to complete other exercises that use Azure Synapse Analytics, you can skip this section. Otherwise, follow the steps below to avoid unnecessary Azure costs.
+>                 **Observação**: se o seu objetivo for realizar outros exercícios que usam o Azure Synapse Analytics, ignore esta seção. Caso contrário, siga as etapas abaixo para evitar custos desnecessários com o Azure.
 
 1. Feche a guia do navegador do Synapse Studio, sem salvar nenhuma alteração, e retorne ao portal do Azure.
 1. No portal do Azure, na **Página Inicial**, selecione **Grupos de recursos**.
