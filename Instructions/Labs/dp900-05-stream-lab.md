@@ -84,8 +84,8 @@ Este laboratório levará aproximadamente **15** minutos para ser concluído.
 6. No painel à esquerda do painel da conta de armazenamento, selecione a guia **Contêineres**.
 7. Abra o contêiner de **dados**.
 8. No contêiner de **dados**, navegue pela hierarquia de pastas, que inclui uma pasta para o ano atual, com subpastas para o mês, dia e hora.
-9. Na pasta da hora, selecione o arquivo que foi criado, que deve ter um nome semelhante a **0_xxxxxxxxxxxxxxxx.json**.
-10. Na página do arquivo, selecione **Editar** e revise o conteúdo do arquivo; que deve consistir em um registro JSON para cada período de 10 segundos, mostrando o número de mensagens recebidas de dispositivos IoT, assim:
+9. Na pasta da hora, observe o arquivo que foi criado, que deve ter um nome semelhante a **0_xxxxxxxxxxxxxxxx.json**.
+10. No menu **...** do arquivo (à direita dos detalhes do arquivo), selecione **Exibir/editar** e revise o conteúdo do arquivo; que deve consistir em um registro JSON para cada período de 10 segundos, mostrando o número de mensagens recebidas de dispositivos IoT, assim:
 
     ```
     {"starttime":"2021-10-23T01:02:13.2221657Z","endtime":"2021-10-23T01:02:23.2221657Z","device":"iotdevice","messages":2}

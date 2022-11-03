@@ -68,7 +68,7 @@ O suporte do Azure Data Lake Store Gen2 permite que você use pastas hierárquic
 
 1. Baixe o arquivo JSON [product2.json](https://aka.ms/product2.json?azure-portal=true) de `https://aka.ms/product2.json` e salve-o em seu computador na mesma pasta em que você baixou o **product1.json** anteriormente, ele será carregado no armazenamento de blobs mais adiante).
 1. Na página do portal do Azure da conta de armazenamento, no lado esquerdo, role para baixo até a seção **Configurações** e selecione **Atualização do Data Lake Gen2**.
-1. Na página ****Atualização do Data Lake Gen2****, expanda e conclua cada etapa para atualizar a conta de armazenamento a fim de habilitar o namespace hierárquico e dar suporte ao Azure Data Lake Storage Gen 2. Isso pode levar algum tempo.
+1. Na página **Atualização do Data Lake Gen2**, expanda e conclua cada etapa para atualizar a conta de armazenamento a fim de habilitar o namespace hierárquico e dar suporte ao Azure Data Lake Storage Gen 2. Isso pode levar algum tempo.
 1. Quando a atualização estiver concluída, no painel à esquerda, na seção superior, selecione **Navegador de armazenamento** e volte à raiz do contêiner de blobs **dados**, que ainda contém a pasta **product_data**.
 1. Selecione a pasta **product_data** e verifique se ela ainda contém o arquivo **product1.json** que você carregou anteriormente.
 1. Use o botão **&#10514; Carregar** para abrir o painel **Carregar blob**.

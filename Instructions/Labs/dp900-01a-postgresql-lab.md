@@ -20,7 +20,7 @@ Neste exercício, você provisionará um recurso do Banco de Dados do Azure para
 
 1. No portal do Azure, selecione **&#65291; Criar recurso** no canto superior esquerdo e pesquise *Banco de Dados do Azure para PostgreSQL*. Então, na página resultante do **Banco de Dados do Azure para PostgreSQL**, escolha **Criar**.
 
-1. Revise as opções do Banco de Dados do Azure para PostgreSQL disponíveis e, no bloco **Servidor flexível**, selecione **Criar**.
+1. Examine as opções de Banco de Dados do Azure para PostgreSQL disponíveis e, em seguida, no bloco **Banco de Dados do Azure para PostgreSQL**, selecione **Servidor flexível (Recomendado)** e, em seguida, **Criar**.
 
     ![Captura de tela das opções de implantação do Banco de Dados do Azure para PostgreSQL](images/postgresql-options.png)
 
