@@ -82,7 +82,7 @@ Uma das principais tarefas que você pode executar com o Azure Synapse Analytics
     - **Delimitador de linha**: Alimentação de linha (\n)
     - **Primeira linha como cabeçalho**: Selecionada
     - **Tipo de compactação**: Nenhum
-7. Na etapa de **Destino**, na subetapa de **Conjunto de dados**, selecione as seguintes configurações:
+7. Na etapa **Destino**, na subetapa **Conjunto de dados**, selecione as seguintes configurações:
     - **Tipo de destino**: Azure Data Lake Storage Gen 2
     - **Conexão**: *selecione a conexão existente com o data lake store (gerado para você no momento da criação do workspace).*
 8. Depois de selecionar a conexão, na etapa **Destino/conjunto de dados**, verifique se as seguintes configurações estão selecionadas e, em seguida, clique em **Avançar >** :
@@ -91,7 +91,7 @@ Uma das principais tarefas que você pode executar com o Azure Synapse Analytics
     - **Comportamento da cópia**: Nenhum
     - **Máximo de conexões simultâneas**: *Deixar em branco*
     - **Tamanho do bloco (MB)**: *Deixar em branco*
-9. Na etapa de **Destino**, na subetapa de **Configuração**, verifique se as propriedades a seguir estão selecionadas. Em seguida, selecione **Avançar >**:
+9. Na etapa **Destino**, na subetapa **Configuração**, verifique se as propriedades a seguir estão selecionadas. Em seguida, selecione **Avançar >**:
     - **Formato de arquivo**: DelimitedText
     - **Delimitador de colunas**: Vírgula (,)
     - **Delimitador de linha**: Alimentação de linha (\n)
@@ -106,7 +106,7 @@ Uma das principais tarefas que você pode executar com o Azure Synapse Analytics
     - **Habilitar registro em log**: <u>Des</u>marcado
     - **Habilitar processo de preparo**: <u>Des</u>marcado
 11. Na etapa **Revisar e concluir**, na subetapa **Revisar**, leia o resumo e clique em **Avançar >**.
-12. Na etapa de **Implantar**, aguarde a implantação do pipeline e clique em **Concluir**.
+12. Na subetapa **Implantação**, aguarde a implantação do pipeline e clique em **Concluir**.
 13. No Synapse Studio, selecione a página **Monitorar** e, na guia **Execuções de pipeline**, aguarde até que o pipeline **Copiar produtos** seja concluído com um status de **Sucesso** (é possível usar o botão **&#8635; Atualizar** na página Execuções de pipeline para atualizar o status).
 14. Na página **Dados**, selecione a guia **Vinculado** e expanda a hierarquia do **Azure Data Lake Storage Gen 2** até ver o armazenamento de arquivos do workspace do Synapse. Em seguida, selecione o armazenamento de arquivos para verificar se um arquivo chamado **products.csv** foi copiado para esse local, como mostrado aqui:
 
