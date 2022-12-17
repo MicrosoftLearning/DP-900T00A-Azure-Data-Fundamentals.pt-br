@@ -58,9 +58,7 @@ Este laboratório levará aproximadamente **15** minutos para ser concluído.
 
     Se todos esses três recursos não estiverem listados, clique no botão **&#8635; Atualizar** até que eles apareçam.
 
-    > **Observação**: se você estiver usando a área restrita de aprendizado, o grupo de recursos também poderá conter uma segunda *Conta de armazenamento* chamada **cloudshell*xxxxxxxx***, que armazena os dados do Azure Cloud Shell usados para executar o script de configuração.
-
-3. Selecione ao trabalho **stream*xxxxxxxxxxxxxxx*** do Stream Analytics e visualize as informações em sua página **Visão geral**, observando os seguintes detalhes:
+ 3. Selecione ao trabalho **stream*xxxxxxxxxxxxxxx*** do Stream Analytics e visualize as informações em sua página **Visão geral**, observando os seguintes detalhes:
     - O trabalho tem uma *entrada* chamada **iotinput** e uma *saída* chamada **bloboutput**. Elas fazem referência ao Hub IoT e à conta de armazenamento criada pelo script de configuração.
     - O trabalho tem uma *consulta*, que lê os dados da entrada **iotinput** e os agrega contando o número de mensagens processadas a cada 10 segundos; gravando os resultados na saída **bloboutput**.
 
