@@ -1,10 +1,10 @@
-# <a name="dp-900-trainer-lab-mapping"></a>Mapa do laboratório de treinamento do DP-900
+# Mapa do laboratório de treinamento do DP-900
 
 Este curso, DP-900: Microsoft Azure Data Fundamentals, tem um conjunto de laboratórios designados para treinamento com instrutor. 
 
 > Observação: os instrutores podem optar por pedir aos alunos que concluam um ou mais laboratórios no próprio tempo usando os exercícios nos roteiros de aprendizagem do Learn associados (https://docs.microsoft.com/users/23110622/collections/0kjyh8rn5gdrjj). 
 
-## <a name="dp-900-module-mapping-to-labs"></a>Mapa do módulo para laboratórios do DP-900
+## Mapa do módulo para laboratórios do DP-900
 
 | Módulo | Laboratório | Arquivo markdown |
 | --- | --- | --- |
