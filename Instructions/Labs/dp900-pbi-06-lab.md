@@ -4,24 +4,24 @@ lab:
   module: Explore fundamentals of data visualization
 ---
 
-# <a name="explore-fundamentals-of-data-visualization-with-power-bi"></a>Explorar os conceitos básicos da visualização de dados com o Power BI
+# Explorar os conceitos básicos da visualização de dados com o Power BI
 
 Neste exercício, você usará o Microsoft Power BI Desktop para criar um modelo de dados e um relatório contendo visualizações de dados interativas.
 
 Este laboratório levará aproximadamente **20** minutos para ser concluído.
 
-## <a name="before-you-start"></a>Antes de começar
+## Antes de começar
 
 É necessário ter uma [assinatura do Azure](https://azure.microsoft.com/free) com acesso de nível administrativo.
 
-### <a name="install-power-bi-desktop"></a>Instalar o Power BI Desktop
+### Instalar o Power BI Desktop
 
 Se o Microsoft Power BI Desktop ainda não estiver instalado em seu computador Windows, você poderá baixá-lo e instalá-lo gratuitamente.
 
 1. Baixe o instalador do Power BI Desktop de [https://aka.ms/power-bi-desktop](https://aka.ms/power-bi-desktop?azure-portal=true).
 1. Quando o arquivo for baixado, abra-o e use o assistente de configuração para instalar o Power BI Desktop em seu computador. Esta instalação pode levar alguns minutos.
 
-## <a name="import-data"></a>Importar dados
+## Importar dados
 
 1. Abra o Power BI Desktop. A interface do aplicativo deve ser semelhante a esta:
 
@@ -63,7 +63,7 @@ Se o Microsoft Power BI Desktop ainda não estiver instalado em seu computador W
     https://github.com/MicrosoftLearning/DP-900T00A-Azure-Data-Fundamentals/raw/master/power-bi/orders.csv
     ```
 
-## <a name="explore-a-data-model"></a>Explorar um modelo de dados
+## Explorar um modelo de dados
 
 As três tabelas de dados que você importou foram carregadas em um modelo de dados, que agora você explorará e refinará.
 
@@ -86,14 +86,14 @@ As três tabelas de dados que você importou foram carregadas em um modelo de da
 
     ![Captura de tela mostrando como renomear a hierarquia no Power BI.](images/rename-hierarchy.png)
 
-1. Na extremidade esquerda, selecione a guia **Dados** e, em seguida, no painel **Campos**, selecione a tabela **clientes**.
+1. Na extremidade esquerda, selecione a guia **Exibição de dados** e, em seguida, no painel **Dados**, selecione a tabela **clientes**.
 1. Selecione o cabeçalho da coluna **Cidade** e defina sua propriedade **Categoria de Dados** como **Cidade**:
 
     ![Captura de tela mostrando como definir uma categoria de dados no Power BI.](images/data-category.png)
 
     Esta etapa garante que os valores nesta coluna sejam interpretados como nomes de cidades, o que pode ser útil ao incluir visualizações de mapas.
 
-## <a name="create-a-report"></a>Criar um relatório
+## Criar um relatório
 
 Agora você está quase pronto para criar um relatório. Primeiro, você precisará verificar algumas configurações para garantir que todas as visualizações estejam habilitadas.
 
@@ -103,7 +103,7 @@ Agora você está quase pronto para criar um relatório. Primeiro, você precisa
 
     Essa configuração garante a possibilidade de incluir visualizações de mapa nos relatórios.
 
-1. Na extremidade esquerda, selecione a guia **Relatório** e exiba a interface de design de relatório.
+1. Na extremidade esquerda, selecione a guia **Exibição de relatório** e exiba a interface de design de relatório.
 
     ![Captura de tela mostrando a guia de relatório no Power BI.](images/report-tab.png)
 
@@ -111,11 +111,11 @@ Agora você está quase pronto para criar um relatório. Primeiro, você precisa
 
     ![Captura de tela mostrando como adicionar uma caixa de texto no Power BI.](images/text-box.png)
 
-1. Selecione qualquer área vazia no relatório para desmarcar a caixa de texto. Em seguida, no painel **Campos**, expanda **Produtos** e selecione o campo **Produtos Categorizados**. Esta etapa adiciona uma tabela ao relatório.
+1. Selecione qualquer área vazia no relatório para desmarcar a caixa de texto. Em seguida, no painel **Dados**, expanda **Produtos** e selecione o campo **Produtos Categorizados**. Esta etapa adiciona uma tabela ao relatório.
 
     ![Captura de tela mostrando como adicionar uma tabela de produtos categorizados a um relatório no Power BI.](images/categorized-products-table.png)
 
-1. Com a tabela ainda selecionada, no painel **Campos**, expanda **Pedidos** e selecione **Receita**. Uma coluna Receita é adicionada à tabela. Pode ser necessário expandir o tamanho da tabela para vê-la.
+1. Com a tabela ainda selecionada, no painel **Dados**, expanda **Pedidos** e selecione **Receita**. Uma coluna Receita é adicionada à tabela. Pode ser necessário expandir o tamanho da tabela para vê-la.
 
     A receita é formatada como moeda, como você especificou no modelo. No entanto, você não especificou o número de casas decimais e, portanto, os valores incluem valores fracionários. Isso não será importante para as visualizações criadas, mas você poderá voltar à guia **Modelo** ou **Dados** e alterar as casas decimais, se desejar.
 
@@ -125,17 +125,17 @@ Agora você está quase pronto para criar um relatório. Primeiro, você precisa
 
     ![Captura de tela mostrando um gráfico de colunas empilhadas de produtos categorizados com receita em um relatório.](images/stacked-column-chart.png)
 
-1. Acima do gráfico de colunas selecionado, selecione o ícone **&#8595;** para ativar o drill-down. Em seguida, no gráfico, selecione a segunda coluna (*Bicicletas de Estrada*) para fazer uma busca detalhada e ver a receita dos produtos individuais nesta categoria. Essa funcionalidade é possível porque você definiu uma hierarquia de categorias e produtos.
+1. Acima do gráfico de colunas selecionado, selecione o ícone **&#8595;** para ativar o drill-down. Em seguida, no gráfico, selecione a segunda coluna para fazer uma busca detalhada e ver a receita dos produtos individuais nesta categoria. Essa funcionalidade é possível porque você definiu uma hierarquia de categorias e produtos.
 
     ![Captura de tela mostrando um gráfico de colunas com drill-down aplicado para ver os produtos em uma categoria.](images/drill-down.png)
 
 1. Use o ícone **&#x2191;** para fazer drill-up para o nível da categoria. Em seguida, selecione o ícone **(** &#8595; **)** para desativar o recurso de drill-down.
-1. Selecione uma área em branco do relatório e, no painel **Campos**, selecione o campo **Quantidade** na tabela **Pedidos** e o campo **Categoria** na tabela **produtos**. Essa etapa resulta em outro gráfico de colunas mostrando a quantidade de vendas por categoria de produto.
+1. Selecione uma área em branco do relatório e, no painel **Dados**, selecione o campo **Quantidade** na tabela **Pedidos** e o campo **Categoria** na tabela **produtos**. Essa etapa resulta em outro gráfico de colunas mostrando a quantidade de vendas por categoria de produto.
 1. Com o novo gráfico de colunas selecionado, no painel **Visualizações**, selecione **Gráfico de pizza** e redimensione o gráfico e posicione-o ao lado do gráfico de colunas receita por categoria.
 
     ![Captura de tela mostrando um gráfico de pizza que exibe a quantidade de vendas por categoria.](images/category-pie-chart.png)
 
-1. Selecione uma área em branco do relatório e, no painel **Campos**, selecione o campo **Cidade** na tabela **clientes** e, em seguida, selecione o campo **Receita** na tabela **pedidos**. Isso resulta em um mapa que mostra a receita de vendas por cidade. Reorganize e redimensione as visualizações conforme necessário:
+1. Selecione uma área em branco do relatório e, no painel **Dados**, selecione o campo **Cidade** na tabela **clientes** e, em seguida, selecione o campo **Receita** na tabela **pedidos**. Isso resulta em um mapa que mostra a receita de vendas por cidade. Reorganize e redimensione as visualizações conforme necessário:
 
     ![Captura de tela mostrando um mapa que exibe a receita por cidade.](images/revenue-map.png)
 

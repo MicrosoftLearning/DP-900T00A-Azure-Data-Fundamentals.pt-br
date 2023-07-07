@@ -4,17 +4,17 @@ lab:
   module: Explore fundamentals of large-scale data warehousing
 ---
 
-# <a name="explore-data-analytics-in-azure-with-azure-synapse-analytics"></a>Explorar a análise de dados no Azure com o Azure Synapse Analytics
+# Explorar a análise de dados no Azure com o Azure Synapse Analytics
 
 Neste exercício, você vai provisionar um workspace do Azure Synapse Analytics em sua assinatura do Azure e usá-lo para ingerir e consultar dados.
 
 Este laboratório levará aproximadamente **30** minutos para ser concluído.
 
-## <a name="before-you-start"></a>Antes de começar
+## Antes de começar
 
 É necessário ter uma [assinatura do Azure](https://azure.microsoft.com/free) com acesso de nível administrativo.
 
-## <a name="provision-an-azure-synapse-analytics-workspace"></a>Provisionar um workspace do Azure Synapse Analytics
+## Provisionar um workspace do Azure Synapse Analytics
 
 Para usar o Azure Synapse Analytics, você precisa provisionar um recurso de workspace do Azure Synapse Analytics em sua assinatura do Azure.
 
@@ -53,7 +53,7 @@ Para usar o Azure Synapse Analytics, você precisa provisionar um recurso de wor
 
     ![Imagem mostrando o menu expandido do Synapse Studio para gerenciar recursos e executar tarefas de análise de dados](images/synapse-studio.png)
 
-## <a name="ingest-data"></a>Ingestão de dados
+## Ingestão de dados
 
 Uma das principais tarefas que você pode executar com o Azure Synapse Analytics é definir *pipelines* que transferem (e, se necessário, transformam) dados de uma ampla gama de fontes no seu workspace para análise.
 
@@ -61,7 +61,7 @@ Uma das principais tarefas que você pode executar com o Azure Synapse Analytics
 2. Na ferramenta Copiar Dados, na etapa **Propriedades**, verifique se **Tarefa de cópia interna** e **Executar agora** estão selecionados e clique em **Avançar >**.
 3. Na etapa de **Origem**, na subetapa de **Conjunto de dados**, selecione as seguintes configurações:
     - **Tipo de fonte**: Todas
-    - **Conexão**: *crie uma conexão e, no painel **Nova conexão** exibido, na guia **Arquivo**, selecione **HTTP**. Então crie uma conexão com um arquivo de dados usando as seguintes configurações:*
+    - **Conexão**: *crie uma conexão e, no painel **Nova conexão** exibido, na guia **Protocolo genérico**, selecione **HTTP**. Então crie uma conexão com um arquivo de dados usando as seguintes configurações:*
         - **Nome**: Produtos da AdventureWorks
         - **Descrição**: Lista de produtos via HTTP
         - **Conectar por meio de runtime de integração**: AutoResolveIntegrationRuntime
@@ -112,7 +112,7 @@ Uma das principais tarefas que você pode executar com o Azure Synapse Analytics
 
     ![Imagem mostrando a hierarquia do Azure Data Lake Storage Gen 2 expandida do Synapse Studio com o armazenamento de arquivos do workspace do Synapse](images/synapse-storage.png)
 
-## <a name="use-a-sql-pool-to-analyze-data"></a>Usar um pool de SQL para analisar os dados
+## Usar um pool de SQL para analisar os dados
 
 Agora que você já ingeriu alguns dados no seu workspace, use o Synapse Analytics para consultá-los e analisá-los. Uma das maneiras mais comuns de consultar dados é usar o SQL e, no Synapse Analytics, você pode usar um *pool de SQL* para executar o código de SQL.
 
@@ -210,7 +210,7 @@ Agora que você já ingeriu alguns dados no seu workspace, use o Synapse Analyti
 
     ![Imagem mostrando a exibição de gráfico de contagem de produtos](images/column-chart.png)
 
-## <a name="use-a-spark-pool-to-analyze-data"></a>Usar um pool do Spark para analisar os dados
+## Usar um pool do Spark para analisar os dados
 
 Embora a linguagem SQL seja comum para a consulta de conjuntos de dados estruturados, muitos analistas de data consideram linguagens como Python úteis para explorar e preparar dados para análise. No Azure Synapse Analytics, você pode executar o código Python (e outros) em um *pool do Spark*; que usa um mecanismo de processamento de dados distribuído com base em Apache Spark.
 
@@ -291,7 +291,7 @@ Embora a linguagem SQL seja comum para a consulta de conjuntos de dados estrutur
 
 15. Feche o painel **Notebook 1** e descarte as alterações.
 
-## <a name="delete-azure-resources"></a>Excluir recursos do Azure
+## Excluir recursos do Azure
 
 Se você terminou de explorar Azure Synapse Analytics, exclua os recursos que criou para evitar custos desnecessários do Azure.
 
