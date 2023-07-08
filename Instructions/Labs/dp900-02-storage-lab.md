@@ -4,17 +4,17 @@ lab:
   module: Explore Azure Storage for non-relational data
 ---
 
-# <a name="explore-azure-storage"></a>Explorar o Armazenamento do Azure
+# Explorar o Armazenamento do Azure
 
 Neste exercício, você vai provisionar uma conta do Armazenamento do Azure na assinatura do Azure e explorar as várias maneiras de usá-la para armazenar dados.
 
 Este laboratório levará aproximadamente **15** minutos para ser concluído.
 
-## <a name="before-you-start"></a>Antes de começar
+## Antes de começar
 
 É necessário ter uma [assinatura do Azure](https://azure.microsoft.com/free) com acesso de nível administrativo.
 
-## <a name="provision-an-azure-storage-account"></a>Provisionar uma conta do Armazenamento do Azure
+## Provisionar uma conta do Armazenamento do Azure
 
 A primeira etapa ao usar o Armazenamento do Azure é provisionar uma conta do Armazenamento do Azure em sua assinatura do Azure.
 
@@ -30,10 +30,10 @@ A primeira etapa ao usar o Armazenamento do Azure é provisionar uma conta do Ar
 
 1. Selecione **Avançar: Avançado >** e veja as opções de configuração avançada. Em particular, observe que é aqui que você pode habilitar o namespace hierárquico para dar suporte ao Azure Data Lake Storage Gen2. Deixe essa opção **<u>desmarcada</u>** (ela será habilitada posteriormente) e selecione **Avançar: Rede >** para visualizar as opções de rede da conta de armazenamento.
 1. Selecione **Avançar: Proteção de dados >** e, na seção **Recuperação**, <u>desmarque</u> todas as opções **Habilitar exclusão temporária...** . Essas opções retêm os arquivos excluídos para recuperação subsequente, mas podem causar problemas posteriormente quando você habilitar o namespace hierárquico.
-1. Continue avançando pelas páginas restantes com **Avançar >** sem alterar nenhuma das configurações padrão e, na página **Revisar + Criar**, aguarde a validação de suas seleções e selecione **Criar** para criar a conta de Armazenamento do Azure.
+1. Continue avançando pelas páginas restantes com **Avançar >** sem alterar nenhuma das configurações padrão e, na página **Revisar**, aguarde a validação de suas seleções e selecione **Criar** para criar a conta de Armazenamento do Microsoft Azure.
 1. Aguarde o fim da implantação. Em seguida, vá para o recurso que foi implantado.
 
-## <a name="explore-blob-storage"></a>Explorar o armazenamento de blobs
+## Explorar o armazenamento de blobs
 
 Agora que você tem uma conta de armazenamento do Azure, pode criar um contêiner para dados de blob.
 
@@ -62,7 +62,7 @@ Agora que você tem uma conta de armazenamento do Azure, pode criar um contêine
 1. Selecione o ícone **&#x2027;&#x2027;&#x2027;** na extremidade direita da pasta e observe que nenhuma opção é exibida. As pastas em um contêiner de blobs de namespace simples são virtuais e não podem ser gerenciadas.
 1. Use o ícone **X** no canto superior direito da página de **dados** para fechar a página e retornar à página **Contêineres**.
 
-## <a name="explore-azure-data-lake-storage-gen2"></a>Explorar Azure Data Lake Storage Gen2
+## Explorar Azure Data Lake Storage Gen2
 
 O suporte do Azure Data Lake Store Gen2 permite que você use pastas hierárquicas para organizar e gerenciar o acesso a blobs. Ele também permite que você use o armazenamento de blobs do Azure para hospedar sistemas de arquivos distribuídos para plataformas comuns de análise de Big Data.
 
@@ -79,7 +79,7 @@ O suporte do Azure Data Lake Store Gen2 permite que você use pastas hierárquic
 1. Selecione o ícone **&#x2027;&#x2027;&#x2027;** na extremidade direita da pasta e observe que, com o namespace hierárquico habilitado, é possível executar tarefas de configuração no nível da pasta, incluindo renomear pastas e definir permissões.
 1. Use o ícone **X** no canto superior direito da página de **dados** para fechar a página e retornar à página **Contêineres**.
 
-## <a name="explore-azure-files"></a>Explorar os Arquivos do Azure
+## Explorar os Arquivos do Azure
 
 O Armazenamento de Arquivos do Azure fornece uma maneira de criar compartilhamentos de arquivos baseados em nuvem.
 
@@ -89,7 +89,7 @@ O Armazenamento de Arquivos do Azure fornece uma maneira de criar compartilhamen
 1. Na parte superior da página, selecione **Conectar**. Em seguida, no painel **Conectar**, observe que há guias para sistemas operacionais comuns (Windows, Linux e macOS) que contêm scripts que você pode executar para se conectar à pasta compartilhada a partir de um computador cliente.
 1. Feche o painel **Conectar** e, em seguida, feche a página de **arquivos** para retornar à página **Compartilhamentos de arquivos** para sua conta de armazenamento do Azure.
 
-## <a name="explore-azure-tables"></a>Explorar o Tabelas do Azure
+## Explorar o Tabelas do Azure
 
 O Tabelas do Azure fornece um armazenamento de chave/valor para aplicativos que precisam armazenar valores de dados, mas não precisam da funcionalidade completa e da estrutura de um banco de dados relacional.
 

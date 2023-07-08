@@ -4,17 +4,17 @@ lab:
   module: Explore relational data in Azure
 ---
 
-# <a name="explore-azure-database-for-mysql"></a>Explorar o Banco de Dados do Azure para MySQL
+# Explorar o Banco de Dados do Azure para MySQL
 
 Neste exercício, você provisionará um recurso de Banco de Dados do Azure para MySQL em sua assinatura do Azure.
 
 Este laboratório levará aproximadamente **5** minutos para ser concluído.
 
-## <a name="before-you-start"></a>Antes de começar
+## Antes de começar
 
 É necessário ter uma [assinatura do Azure](https://azure.microsoft.com/free) com acesso de nível administrativo.
 
-## <a name="provision-an-azure-database-for-mysql-resource"></a>Provisionar um recurso do Banco de Dados do Azure para MySQL
+## Provisionar um recurso do Banco de Dados do Azure para MySQL
 
 Neste exercício, você provisionará um recurso do Banco de Dados do Azure para MySQL.
 
