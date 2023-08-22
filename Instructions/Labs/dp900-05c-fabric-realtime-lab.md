@@ -21,7 +21,7 @@ Antes de trabalhar com os dados no Fabric, crie um workspace com a avaliação d
 3. Crie um workspace com um nome de sua escolha, selecionando um modo de licenciamento na seção **Avançado** que inclua a capacidade do Fabric (*Avaliação*, *Premium* ou *Malha*).
 4. Quando o novo workspace for aberto, ele estará vazio.
 
-    ![Captura de tela de um workspace vazio no Power BI.](./Images/new-workspace.png)
+    ![Captura de tela de um workspace vazio no Power BI.](./images/new-workspace.png)
 
 ## Criar um banco de dados KQL
 
@@ -37,7 +37,7 @@ Agora que você tem um workspace, crie um banco de dados KQL para armazenar os d
 
     Após alguns minutos, um banco de dados KQL será criado:
 
-    ![Captura de tela de um novo banco de dados KQL.](./Images/kql-database.png)
+    ![Captura de tela de um novo banco de dados KQL.](./images/kql-database.png)
 
     Atualmente, não há tabelas no banco de dados.
 
@@ -50,14 +50,14 @@ Os fluxos de eventos fornecem uma forma escalonável e flexível de ingerir dado
 
     Após alguns instantes, o designer visual do fluxo de eventos será exibido.
 
-    ![Captura de tela do designer de Fluxo de eventos.](./Images/eventstream-designer.png)
+    ![Captura de tela do designer de Fluxo de eventos.](./images/eventstream-designer.png)
 
     A tela do designer visual mostra uma origem que se conecta ao fluxo de eventos, que, por sua vez, está conectado a um destino.
 
 1. Na tela do designer, na lista **Nova origem** da origem, selecione **Dados de exemplo**. Em seguida, no painel **Dados de exemplo**, especifique o nome **taxis** e selecione os dados de exemplo de **Táxis Amarelos** (que representam os dados coletados de corridas de táxis). Em seguida, selecione**Adicionar**.
 1. Abaixo da tela do designer, selecione a guia **Visualização de dados** para visualizar os dados que estão sendo transmitidos da origem:
 
-    ![Captura de tela da visualização de dados do Fluxo de eventos.](./Images/eventstream-preview.png)
+    ![Captura de tela da visualização de dados do Fluxo de eventos.](./images/eventstream-preview.png)
 
 1. Na tela do designer, na lista **Novo destino** do destino, selecione **Banco de dados KQL**. Em seguida, no painel **Banco de dados KQL**, especifique o nome de destino **taxi-data** e selecione o workspace e o banco de dados KQL. Depois, escolha **Criar e configurar**.
 1. No assistente **Ingerir dados**, na página **Destino**, selecione **Nova tabela** e insira o nome da tabela **taxi-data**. Em seguida, selecione **Avançar: Origem**.
@@ -66,7 +66,7 @@ Os fluxos de eventos fornecem uma forma escalonável e flexível de ingerir dado
 1. Na página **Resumo**, aguarde até que a ingestão contínua seja estabelecida e escolha **Fechar**.
 1. Verifique se o fluxo de eventos concluído tem esta aparência:
 
-    ![Captura de tela de um Fluxo de eventos concluído.](./Images/complete-eventstream.png)
+    ![Captura de tela de um Fluxo de eventos concluído.](./images/complete-eventstream.png)
 
 ## Consultar dados em tempo real em um banco de dados KQL
 
@@ -75,7 +75,7 @@ O fluxo de eventos preenche continuamente uma tabela no banco de dados KQL, perm
 1. No hub de menus à esquerda, selecione o banco de dados KQL (ou escolha o workspace e localize o banco de dados KQL nele).
 1. No menu **…** da tabela **taxi-data** (que foi criada pelo fluxo de eventos), selecione **Tabela de consulta > Registros ingeridos nas últimas 24 horas**.
 
-    ![Captura de tela do menu Tabela de consulta em um banco de dados KQL.](./Images/kql-query.png)
+    ![Captura de tela do menu Tabela de consulta em um banco de dados KQL.](./images/kql-query.png)
 
 1. Veja os resultados da consulta: ela deverá ser uma consulta KQL como esta:
 
@@ -95,7 +95,7 @@ O fluxo de eventos preenche continuamente uma tabela no banco de dados KQL, perm
     ```
 
 1. Use o botão **&#9655; Executar** para executar a consulta e analisar os resultados, que mostram o número de embarques em táxis em cada hora.
- 
+
 ## Limpar os recursos
 
 Se você terminou de explorar a análise em tempo real no Microsoft Fabric, exclua o workspace criado para este exercício.
