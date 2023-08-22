@@ -21,7 +21,7 @@ Antes de trabalhar com os dados no Fabric, crie um workspace com a avaliação d
 3. Crie um workspace com um nome de sua escolha, selecionando um modo de licenciamento na seção **Avançado** que inclua a capacidade do Fabric (*Avaliação*, *Premium* ou *Malha*).
 4. Quando o novo workspace for aberto, ele estará vazio.
 
-    ![Captura de tela de um workspace vazio no Power BI.](./Images/new-workspace.png)
+    ![Captura de tela de um workspace vazio no Power BI.](./images/new-workspace.png)
 
 ## Criar um lakehouse
 
@@ -37,7 +37,7 @@ Agora que você tem um workspace, é hora de alternar para a experiência de *En
 
     Após alguns minutos, um lakehouse será criado:
 
-    ![Captura de tela de um novo lakehouse.](./Images/new-lakehouse.png)
+    ![Captura de tela de um novo lakehouse.](./images/new-lakehouse.png)
 
 3. Veja o novo lakehouse e observe que o painel do **Lakehouse Explorer** à esquerda permite que você navegue pelas tabelas e pelos arquivos no lakehouse:
     - A pasta **Tabelas** contém tabelas que você pode consultar usando o SQL. As tabelas de um lakehouse do Microsoft Fabric são baseadas no formato de arquivo *Delta Lake* de código aberto, comumente usado no Apache Spark.
@@ -52,7 +52,7 @@ Uma forma simples de ingerir dados é usar uma atividade **Copiar Dados** em um 
 1. Na **home page** do lakehouse, no menu **Obter dados**, selecione **Novo pipeline de dados** e crie um pipeline de dados chamado **Ingerir Dados de Vendas**.
 1. No assistente **Copiar Dados**, na página **Escolher uma fonte de dados**, selecione o conjunto de dados de exemplo **Modelo de Dados de Varejo da Wide World Importers**.
 
-    ![Captura de tela da página Escolher fonte de dados.](./Images/choose-data-source.png)
+    ![Captura de tela da página Escolher fonte de dados.](./images/choose-data-source.png)
 
 1. Selecione **Avançar** e veja as tabelas na fonte de dados na página **Conectar-se à fonte de dados**.
 1. Escolha a tabela **dimension_stock_item**, que contém registros de produtos. Em seguida, selecione **Avançar** para avançar para a página **Escolher destino de dados**.
@@ -60,25 +60,25 @@ Uma forma simples de ingerir dados é usar uma atividade **Copiar Dados** em um 
 1. Defina as seguintes opções de destino de dados e selecione **Avançar**:
     - **Pasta raiz**: Tabelas
     - **Carregar configurações**: Carregar em uma nova tabela
-    - **Nome da tabela de destino**: dimProduct
+    - **Nome da tabela de destino**: dimension_stock_item
     - **Mapeamentos de coluna**: *deixe os mapeamentos padrão no estado em que se encontram*
     - **Habilitar partição**: *Não selecionado*
-1. Na página **Revisar _ salvar**, verifique se a opção **Iniciar transferência de dados imediatamente** está selecionada e escolha **Salvar + Executar**.
+1. Na página **Revisar + salvar**, verifique se a opção **Iniciar transferência de dados imediatamente** está selecionada e escolha **Salvar + Executar**.
 
     Um pipeline que contém uma atividade **Copiar Dados** será criado, conforme mostrado aqui:
 
-    ![Captura de tela de um pipeline com uma atividade Copiar Dados.](./Images/copy-data-pipeline.png)
+    ![Captura de tela de um pipeline com uma atividade Copiar Dados.](./images/copy-data-pipeline.png)
 
     Quando o pipeline começar a ser executado, você poderá monitorar o status dele no painel **Saída** no designer de pipeline. Use o ícone **&#8635;** (*Atualizar*) para atualizar o status e aguarde até que ele tenha sido concluído com sucesso.
 
 1. Na barra de menus do hub à esquerda, selecione o lakehouse.
-1. Na **home page**, no painel do **Lakehouse Explorer**, expanda **Tabelas** e verifique se a tabela **dimProduct** foi criada.
+1. Na **Página inicial**, no painel do **Explorador do lakehouse**, expanda **Tabelas** e verifique se a tabela **dimension_stock_item** foi criada.
 
     > **Observação**: se a nova tabela estiver listada como *não identificada*, use o botão **Atualizar** na barra de ferramentas do lakehouse para atualizar a exibição.
 
-1. Selecione a tabela **dimProduct** para ver o conteúdo dela.
+1. Selecione a tabela **dimension_stock_item** para ver os conteúdos dela.
 
-    ![Captura de tela da tabela dimProduct.](./images/dimProduct.png)
+    ![Captura de tela da tabela dimension_stock_item.](./images/dimProduct.png)
 
 ## Consultar dados em um lakehouse
 
@@ -92,7 +92,7 @@ Agora que você ingeriu dados em uma tabela do lakehouse, use o SQL para consult
 
     ```sql
     SELECT Brand, COUNT(StockItemKey) AS Products
-    FROM dimProduct
+    FROM dimension_stock_item
     GROUP BY Brand
     ```
 
@@ -104,15 +104,15 @@ Agora que você ingeriu dados em uma tabela do lakehouse, use o SQL para consult
 
 Os lakehouses do Microsoft Fabric organizam todas as tabelas em um modelo de dados, que você pode usar para criar visualizações e relatórios.
 
-1. No canto inferior esquerdo da página, no painel **Explorar**, selecione a guia **Modelo** para ver o modelo de dados das tabelas no lakehouse (nesse caso, há apenas uma tabela).
+1. No canto inferior esquerdo da página, no painel **Explorador**, selecione a guia **Modelo** para ver o modelo de dados das tabelas no lakehouse (nesse caso, há apenas uma tabela).
 
     ![Captura de tela da página de modelo em um lakehouse do Fabric.](./images/fabric-model.png)
 
 1. Na barra de ferramentas, selecione **Novo relatório** para abrir uma nova guia do navegador que contém o designer de relatórios do Power BI.
 1. No designer de relatório:
-    1. No painel **Dados**, expanda a tabela **dimProduct** e selecione os campos **Brand** e **StockItemKey**.
-    1. No painel **Visualizações**, selecione a visualização **Gráfico de barras empilhadas** (a primeira listada). Em seguida, verifique se o **eixo Y** contém o campo **Brand** e altere a agregação no **eixo X** para **Count**, de modo que ele contenha o campo **Count of StockItemKey**.
-    
+    1. No painel **Dados**, expanda a tabela **dimension_stock_item** e selecione os campos **Brand** e **StockItemKey**.
+    1. No painel **Visualizações**, selecione a visualização **Gráfico de barras empilhadas** (a primeira listada). Em seguida, verifique se o **eixo Y** contém o campo **Brand** e altere a agregação no **eixo X** para **Count**, de modo que ele contenha o campo **Count of StockItemKey**. Por fim, redimensione a visualização na tela do relatório para preencher o espaço disponível.
+
         ![Captura de tela de um relatório do Power BI.](./images/fabric-report.png)
 
     > **Dica**: use os ícones **>>** para ocultar os painéis do designer de relatório para ver o relatório com mais clareza.
