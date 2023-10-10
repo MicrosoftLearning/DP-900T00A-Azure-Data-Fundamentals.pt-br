@@ -4,17 +4,17 @@ lab:
   module: Explore fundamentals of real-time analytics
 ---
 
-# <a name="explore-azure-stream-analytics"></a>Explorar o Azure Stream Analytics
+# Explorar o Azure Stream Analytics
 
 Neste exercício, você vai provisionar um trabalho do Azure Stream Analytics em sua assinatura do Azure e usá-lo para processar um fluxo de dados em tempo real.
 
 Este laboratório levará aproximadamente **15** minutos para ser concluído.
 
-## <a name="before-you-start"></a>Antes de começar
+## Antes de começar
 
 É necessário ter uma [assinatura do Azure](https://azure.microsoft.com/free) com acesso de nível administrativo.
 
-## <a name="create-azure-resources"></a>Criar recursos do Azure
+## Criar recursos do Azure
 
 1. Entre em sua assinatura do Azure pelo [portal do Azure](https://portal.azure.com) usando as credenciais dela.
 
@@ -40,6 +40,8 @@ Este laboratório levará aproximadamente **15** minutos para ser concluído.
     bash setup.sh
     ```
 
+    > Ignore todas as mensagens de aviso sobre alterações futuras e recursos experimentais.
+
     Aguarde enquanto o script é executado e executa as seguintes ações:
 
     1. Instala as extensões da CLI do Azure necessárias para criar recursos (*você pode ignorar quaisquer avisos sobre extensões experimentais*)
@@ -48,7 +50,7 @@ Este laboratório levará aproximadamente **15** minutos para ser concluído.
     1. Cria uma *Conta de Armazenamento do Azure*, que será usada para armazenar dados processados.
     1. Cria um trabalho do *Azure Stream Analytics*, que processará os dados do dispositivo de entrada em tempo real e gravará os resultados na conta de armazenamento.
 
-## <a name="explore-the-azure-resources"></a>Explorar os recursos do Azure
+## Explorar os recursos do Azure
 
 1. No [portal do Azure](https://portal.azure.com?azure-portal=true), na página inicial, selecione **Grupos de recursos** para ver os grupos de recursos em sua assinatura. O grupo de recursos **learn*xxxxxxxxxxxxxxxxxx...** *, identificado pelo script de configuração, deve estar incluído.
 2. Selecione o grupo de recursos **learn*xxxxxxxxxxxxxxxxx...** * e revise os recursos dele, que devem incluir o seguinte:
@@ -58,11 +60,11 @@ Este laboratório levará aproximadamente **15** minutos para ser concluído.
 
     Se todos esses três recursos não estiverem listados, clique no botão **&#8635; Atualizar** até que eles apareçam.
 
- 3. Selecione ao trabalho **stream*xxxxxxxxxxxxxxx*** do Stream Analytics e visualize as informações em sua página **Visão geral**, observando os seguintes detalhes:
+3. Selecione ao trabalho **stream*xxxxxxxxxxxxxxx*** do Stream Analytics e visualize as informações em sua página **Visão geral**, observando os seguintes detalhes:
     - O trabalho tem uma *entrada* chamada **iotinput** e uma *saída* chamada **bloboutput**. Elas fazem referência ao Hub IoT e à conta de armazenamento criada pelo script de configuração.
     - O trabalho tem uma *consulta*, que lê os dados da entrada **iotinput** e os agrega contando o número de mensagens processadas a cada 10 segundos; gravando os resultados na saída **bloboutput**.
 
-## <a name="use-the-resources-to-analyze-streaming-data"></a>Usar os recursos para analisar dados de streaming
+## Usar os recursos para analisar dados de streaming
 
 1. Na parte superior da página **Visão geral** do trabalho do Stream Analytics, selecione o botão **&#9655; Iniciar** e, no painel **Iniciar trabalho**, selecione **Iniciar** para iniciar o trabalho.
 2. Aguarde uma notificação de que o trabalho de streaming foi iniciado com êxito.
