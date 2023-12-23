@@ -45,7 +45,7 @@ Agora que você tem um workspace, é hora de alternar para a experiência de *En
 
     Atualmente, não há tabelas nem arquivos no lakehouse.
 
-## Ingestão de dados
+## Ingerir dados
 
 Uma forma simples de ingerir dados é usar uma atividade **Copiar Dados** em um pipeline para extrair os dados de uma fonte e copiá-los para um arquivo no lakehouse.
 
