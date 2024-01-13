@@ -35,9 +35,20 @@ Agora que você tem um workspace, crie um banco de dados KQL para armazenar os d
 
 2. Na home page da análise em tempo real, crie um **Banco de Dados KQL** com um nome de sua escolha.
 
-    Após alguns minutos, um banco de dados KQL será criado:
+    ![Captura de tela do Editor RTA com Criar BD KQL Realçado.](./images/create-kql-db.png)
+
+   Você verá uma tela do painel e, em seguida, selecionará o botão Banco de Dados KQL na parte superior.
 
     ![Captura de tela de um novo banco de dados KQL.](./images/kql-database.png)
+
+    Depois de selecionado, será exibida uma caixa de diálogo ***Novo Banco de Dados KQL*** em que você dará um nome ao Banco de Dados KQL.
+
+    ![Captura de tela de um novo banco de dados KQL.](./images/name-kql-db.png)
+
+   - nomear o banco de dados, nesse cenário, é: `my_kql_db`
+   - clique em ***Criar***
+  
+    Após alguns minutos, um banco de dados KQL será criado:
 
     Atualmente, não há tabelas no banco de dados.
 
@@ -91,7 +102,7 @@ O fluxo de eventos preenche continuamente uma tabela no banco de dados KQL, perm
     ```kql
     // This query returns the number of taxi pickups per hour
     ['taxi-data']
-    | summarize PickupCount = count() by bin(tpep_pickup_datetime, 1h)
+    | summarize PickupCount = count() by bin(todatetime(tpep_pickup_datetime), 1h)
     ```
 
 1. Use o botão **&#9655; Executar** para executar a consulta e analisar os resultados, que mostram o número de embarques em táxis em cada hora.
