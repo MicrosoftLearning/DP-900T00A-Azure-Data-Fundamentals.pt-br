@@ -84,9 +84,9 @@ Uma forma simples de ingerir dados é usar uma atividade **Copiar Dados** em um 
 
 Agora que você ingeriu dados em uma tabela do lakehouse, use o SQL para consultá-los.
 
-1. No canto superior direito da página Lakehouse, alterne para o **ponto de extremidade SQL** do lakehouse.
+1. No canto superior direito da página Lakehouse, alterne para o **ponto de extremidade de análise de SQL** do lakehouse.
 
-    ![Captura de tela do menu do ponto de extremidade do SQL.](./images/endpoint-switcher.png)
+    ![Captura de tela do menu do ponto de extremidade de análise do SQL.](./images/endpoint-switcher.png)
 
 1. Na barra de ferramentas, selecione **Nova consulta SQL**. Em seguida, insira o seguinte código SQL no editor de consultas:
 
@@ -102,7 +102,7 @@ Agora que você ingeriu dados em uma tabela do lakehouse, use o SQL para consult
 
 ## Visualizar dados em um lakehouse
 
-Os lakehouses do Microsoft Fabric organizam todas as tabelas em um modelo de dados, que você pode usar para criar visualizações e relatórios.
+Os lakehouses do Microsoft Fabric organizam todas as tabelas em um modelo de dados semântico, que você pode usar para criar visualizações e relatórios.
 
 1. No canto inferior esquerdo da página, no painel **Explorador**, selecione a guia **Modelo** para ver o modelo de dados das tabelas no lakehouse (nesse caso, há apenas uma tabela).
 
