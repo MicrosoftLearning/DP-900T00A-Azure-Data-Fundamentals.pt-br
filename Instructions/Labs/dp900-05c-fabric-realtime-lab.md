@@ -27,36 +27,23 @@ Antes de trabalhar com os dados no Fabric, crie um workspace com a avaliação d
 
 Agora que você tem um workspace, crie um banco de dados KQL para armazenar os dados em tempo real.
 
-1. No canto inferior esquerdo do portal, alterne para a experiência de **Análise em Tempo Real**.
+1. No canto inferior esquerdo do portal, alterne para a experiência de **Inteligência em Tempo Real**.
 
     ![Captura de tela do menu do alternador de experiência.](./images/fabric-real-time.png)
 
-    A home page da análise em tempo real inclui blocos para criação dos ativos comumente usados para a análise de dados em tempo real
+    A página inicial da Inteligência em Tempo Real inclui blocos para criar ativos comumente usados para análise de dados em tempo real.
 
-2. Na home page da análise em tempo real, crie um **Banco de Dados KQL** com um nome de sua escolha.
+2. Na página inicial da Inteligência em Tempo Real, crie um novo **Eventhouse** com um nome de sua escolha.
 
     ![Captura de tela do Editor RTA com Criar BD KQL Realçado.](./images/create-kql-db.png)
 
-   Você verá uma tela do painel e, em seguida, selecionará o botão Banco de Dados KQL na parte superior.
-
-    ![Captura de tela de um novo banco de dados KQL.](./images/kql-database.png)
-
-    Depois de selecionado, será exibida uma caixa de diálogo ***Novo Banco de Dados KQL*** em que você dará um nome ao Banco de Dados KQL.
-
-    ![Captura de tela de um novo banco de dados KQL.](./images/name-kql-db.png)
-
-   - nomear o banco de dados, nesse cenário, é: `my_kql_db`
-   - clique em ***Criar***
-  
-    Após alguns minutos, um banco de dados KQL será criado:
-
-    Atualmente, não há tabelas no banco de dados.
+    O Eventhouse é usado para agrupar e gerenciar seus bancos de dados entre projetos. Um banco de dados KQL vazio é criado automaticamente com o nome do Eventhouse, e adicionaremos dados a ele posteriormente neste exercício.
 
 ## Criar um fluxo de eventos
 
 Os fluxos de eventos fornecem uma forma escalonável e flexível de ingerir dados em tempo real de uma fonte de streaming.
 
-1. Na barra de menus à esquerda, selecione a **home page** da experiência de análise em tempo real.
+1. Na barra de menus à esquerda, selecione a **página inicial** para a experiência de Inteligência em Tempo Real.
 1. Na home page, selecione o bloco para criar um **Fluxo de eventos** com um nome de sua escolha.
 
     Após alguns instantes, o designer visual do fluxo de eventos será exibido.
@@ -70,11 +57,7 @@ Os fluxos de eventos fornecem uma forma escalonável e flexível de ingerir dado
 
     ![Captura de tela da visualização de dados do Fluxo de eventos.](./images/eventstream-preview.png)
 
-1. Na tela do designer, na lista **Novo destino** do destino, selecione **Banco de dados KQL**. Em seguida, no painel **Banco de dados KQL**, especifique o nome de destino **taxi-data** e selecione o workspace e o banco de dados KQL. Depois, escolha **Criar e configurar**.
-1. No assistente **Ingerir dados**, na página **Destino**, selecione **Nova tabela** e insira o nome da tabela **taxi-data**. Em seguida, selecione **Avançar: Origem**.
-1. Na página **Origem**, revise o nome da conexão de dados padrão e escolha **Avançar: Esquema**.
-1. Na página **Esquema**, altere o **Formato de dados** de TXT para **JSON** e veja a visualização para verificar se esse formato resulta em várias colunas de dados. Em seguida, selecione **Avançar: Resumo**.
-1. Na página **Resumo**, aguarde até que a ingestão contínua seja estabelecida e escolha **Fechar**.
+1. Na tela do designer, na lista **Novo destino** do destino, selecione **Banco de dados KQL**. Em seguida, no painel **Banco de dados KQL**, especifique o nome de destino **taxi-data** e selecione o workspace e o banco de dados KQL. Selecione **Criar novo** na tabela Destino e insira o nome de tabela **taxi-data**. Depois, selecione **Adicionar**.
 1. Verifique se o fluxo de eventos concluído tem esta aparência:
 
     ![Captura de tela de um Fluxo de eventos concluído.](./images/complete-eventstream.png)
