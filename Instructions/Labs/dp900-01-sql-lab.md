@@ -4,17 +4,17 @@ lab:
   module: Explore relational data in Azure
 ---
 
-# <a name="explore-azure-sql-database"></a>Explorar o Banco de Dados SQL do Azure
+# Explorar o Banco de Dados SQL do Azure
 
 Neste exercício, você vai provisionar um recurso de Banco de Dados SQL do Azure em sua assinatura do Azure e depois usar o SQL para consultar as tabelas em um banco de dados relacional.
 
 Este laboratório levará aproximadamente **15** minutos para ser concluído.
 
-## <a name="before-you-start"></a>Antes de começar
+## Antes de começar
 
 É necessário ter uma [assinatura do Azure](https://azure.microsoft.com/free) com acesso de nível administrativo.
 
-## <a name="provision-an-azure-sql-database-resource"></a>Provisionar um recurso do Banco de Dados SQL do Azure
+## Provisionar um recurso do Banco de Dados SQL do Azure
 
 1. No [Portal do Azure](https://portal.azure.com?azure-portal=true), selecione **&#65291; Criar recurso** no canto superior esquerdo e pesquise *SQL do Azure*. Em seguida, na página **SQL do Azure** resultante, selecione **Criar**.
 
@@ -26,7 +26,7 @@ Este laboratório levará aproximadamente **15** minutos para ser concluído.
     - **Assinatura**: Selecione sua assinatura do Azure.
     - **Grupo de recursos**: crie um grupo de recursos com um nome de sua escolha.
     - **Nome do banco de dados**: *AdventureWorks*
-    -                 **Servidor**: selecione **Criar novo** e crie um servidor com um nome exclusivo em qualquer local disponível. Use **Autenticação de SQL** e especifique seu nome como o logon de administrador do servidor e uma senha devidamente complexa (lembre-se da senha, você precisará dela mais tarde).
+    - **Servidor**: selecione **Criar novo** e crie um servidor com um nome exclusivo em qualquer local disponível. Use **Autenticação de SQL** e especifique seu nome como o logon de administrador do servidor e uma senha devidamente complexa (lembre-se da senha, você precisará dela mais tarde).
     - **Deseja usar o pool elástico do SQL?**: *Não*
     - **Ambiente de carga de trabalho**: desenvolvimento
     - **Computação + armazenamento**: deixar inalterado
