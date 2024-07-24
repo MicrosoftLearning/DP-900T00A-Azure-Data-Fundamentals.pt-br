@@ -4,7 +4,7 @@ permalink: index.html
 layout: home
 ---
 
-# <a name="azure-data-fundamentals-exercises"></a>Exercícios do Azure Data Fundamentals
+# Exercícios do Azure Data Fundamentals
 
 Esses exercícios práticos foram projetados para dar suporte ao conteúdo de treinamento no [Microsoft Learn](https://docs.microsoft.com/training/).
 
