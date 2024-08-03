@@ -114,7 +114,7 @@ Os lakehouses do Microsoft Fabric organizam todas as tabelas em um modelo de dad
 
 1. No menu **Arquivo**, clique em **Salvar** para salvar o relatório como **Relatório de viagens de táxi** no workspace do Fabric.
 
-    Feche a guia do navegador que contém o relatório para voltar ao lakehouse. Encontre o relatório na página do seu workspace no portal do Microsoft Fabric.
+    Encontre o relatório na página do seu workspace no portal do Microsoft Fabric.
 
 ## Limpar os recursos
 
