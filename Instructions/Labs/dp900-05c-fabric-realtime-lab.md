@@ -1,99 +1,123 @@
 ---
 lab:
   title: Explorar a análise em tempo real no Microsoft Fabric
-  module: Explore fundamentals of large-scale data analytics
+  module: Explore real-time analytics in Microsoft Fabric
 ---
 
 # Explorar a análise em tempo real no Microsoft Fabric
 
-Neste exercício, você vai explorar a análise em tempo real no Microsoft Fabric.
+O Microsoft Fabric fornece inteligência em tempo real, permitindo criar soluções analíticas para fluxos de dados em tempo real. Neste exercício, você usará os recursos de inteligência em tempo real no Microsoft Fabric para ingerir, analisar e visualizar um fluxo em tempo real de dados de uma empresa de táxi.
 
-Este laboratório levará aproximadamente **25** minutos para ser concluído.
+Este laboratório leva cerca de **30** minutos para ser concluído.
 
-> **Observação**: você precisará ter uma licença do Microsoft Fabric para concluir este exercício. Confira [Introdução ao Fabric](https://learn.microsoft.com/fabric/get-started/fabric-trial) para obter detalhes de como habilitar uma licença de avaliação gratuita do Fabric. Você precisará ter uma conta *corporativa* ou de *estudante* da Microsoft para fazer isso. Caso não tenha uma, [inscreva-se em uma avaliação do Microsoft Office 365 E3 ou superior](https://www.microsoft.com/microsoft-365/business/compare-more-office-365-for-business-plans).
+> **Observação**: para concluir este exercício, você precisa de um [locatário do Microsoft Fabric](https://learn.microsoft.com/fabric/get-started/fabric-trial).
 
 ## Criar um workspace
 
-Antes de trabalhar com os dados no Fabric, crie um workspace com a avaliação do Fabric habilitada.
+Antes de trabalhar com os dados no Fabric, você precisa criar um espaço de trabalho em um locatário com a funcionalidade do Fabric habilitada.
 
-1. Entre no [Microsoft Fabric](https://app.fabric.microsoft.com) em `https://app.fabric.microsoft.com`.
-2. Na barra de menus à esquerda, selecione **Workspaces** (o ícone é semelhante a &#128455;).
-3. Crie um workspace com um nome de sua escolha, selecionando um modo de licenciamento na seção **Avançado** que inclua a capacidade do Fabric (*Avaliação*, *Premium* ou *Malha*).
-4. Quando o novo workspace for aberto, ele estará vazio.
+1. Navegue até a [home page do Microsoft Fabric](https://app.fabric.microsoft.com/home?experience=fabric) em `https://app.fabric.microsoft.com/home?experience=fabric` em um navegador e entre com suas credenciais do Fabric.
+1. Na barra de menus à esquerda, selecione **Workspaces** (o ícone é semelhante a &#128455;).
+1. Crie um workspace com um nome de sua escolha selecionando um modo de licenciamento que inclua a capacidade do Fabric (*Avaliação*, *Premium* ou *Malha*).
+1. Quando o novo workspace for aberto, ele estará vazio.
 
-    ![Captura de tela de um workspace vazio no Power BI.](./images/new-workspace.png)
-
-## Criar um banco de dados KQL
-
-Agora que você tem um workspace, crie um banco de dados KQL para armazenar os dados em tempo real.
-
-1. No canto inferior esquerdo do portal, alterne para a experiência de **Inteligência em Tempo Real**.
-
-    ![Captura de tela do menu do alternador de experiência.](./images/fabric-real-time.png)
-
-    A página inicial da Inteligência em Tempo Real inclui blocos para criar ativos comumente usados para análise de dados em tempo real.
-
-2. Na página inicial da Inteligência em Tempo Real, crie um novo **Eventhouse** com um nome de sua escolha.
-
-    ![Captura de tela do Editor RTA com Criar BD KQL Realçado.](./images/create-kql-db.png)
-
-    O Eventhouse é usado para agrupar e gerenciar seus bancos de dados entre projetos. Um banco de dados KQL vazio é criado automaticamente com o nome do Eventhouse, e adicionaremos dados a ele posteriormente neste exercício.
+    ![Captura de tela de um espaço de trabalho vazio no Fabric.](./images/new-workspace.png)
 
 ## Criar um fluxo de eventos
 
-Os fluxos de eventos fornecem uma forma escalonável e flexível de ingerir dados em tempo real de uma fonte de streaming.
+Agora você está pronto para encontrar e ingerir dados em tempo real de uma fonte de streaming. Para fazer isso, você começará no hub em tempo real do Fabric.
 
-1. Na barra de menus à esquerda, selecione a **página inicial** para a experiência de Inteligência em Tempo Real.
-1. Na home page, selecione o bloco para criar um **Fluxo de eventos** com um nome de sua escolha.
+> **Dica**: na primeira vez que você usar o hub em tempo real, algumas dicas de *introdução* podem ser exibidas. Você pode fecha-las.
 
-    Após alguns instantes, o designer visual do fluxo de eventos será exibido.
+1. Na barra de menus à esquerda, selecione o hub em **tempo real**.
 
-    ![Captura de tela do designer de Fluxo de eventos.](./images/eventstream-designer.png)
+    O hub em tempo real fornece uma maneira fácil de encontrar e gerenciar fontes de dados de streaming.
 
-    A tela do designer visual mostra uma origem que se conecta ao fluxo de eventos, que, por sua vez, está conectado a um destino.
+    ![Captura de tela do hub em tempo real no Fabric.](./images/real-time-hub.png)
 
-1. Na tela do designer, na lista **Nova origem** da origem, selecione **Dados de exemplo**. Em seguida, no painel **Dados de exemplo**, especifique o nome **taxis** e selecione os dados de exemplo de **Táxis Amarelos** (que representam os dados coletados de corridas de táxis). Em seguida, selecione**Adicionar**.
-1. Abaixo da tela do designer, selecione a guia **Visualização de dados** para visualizar os dados que estão sendo transmitidos da origem:
+1. No hub em tempo real, na seção **Conectar-se a**, selecione **Fontes de dados**.
+1. Encontre a fonte de dados de amostra **Táxi amarelo** e selecione **Conectar**. Em seguida, no assistente **Conexão**, nomeie a fonte como `taxi` e edite o nome padrão do eventstream para alterá-lo para `taxi-data`. O fluxo padrão associado a esses dados será automaticamente denominado *taxi-data-stream*:
 
-    ![Captura de tela da visualização de dados do Fluxo de eventos.](./images/eventstream-preview.png)
+    ![Captura de tela de um novo eventstream.](./images/name-eventstream.png)
 
-1. Na tela do designer, na lista **Novo destino** do destino, selecione **Banco de dados KQL**. Em seguida, no painel **Banco de dados KQL**, especifique o nome de destino **taxi-data** e selecione o workspace e o banco de dados KQL. Selecione **Criar novo** na tabela Destino e insira o nome de tabela **taxi-data**. Depois, selecione **Adicionar**.
-1. Verifique se o fluxo de eventos concluído tem esta aparência:
+1. Selecione **Avançar** e aguarde a criação da fonte e do eventstream e, em seguida, selecione **Abrir eventstream**. O eventstream mostrará a fonte **táxi** e o **taxi-data-stream** na tela de design:
 
-    ![Captura de tela de um Fluxo de eventos concluído.](./images/complete-eventstream.png)
+   ![Captura de tela da tela do eventstream.](./images/new-taxi-stream.png)
 
-## Consultar dados em tempo real em um banco de dados KQL
+## Criar uma eventhouse
 
-O fluxo de eventos preenche continuamente uma tabela no banco de dados KQL, permitindo que você consulte os dados em tempo real.
+O eventstream ingere os dados de ações em tempo real, mas atualmente não faz nada com eles. Vamos criar um eventhouse onde podemos armazenar os dados capturados em uma tabela.
 
-1. No hub de menus à esquerda, selecione o banco de dados KQL (ou escolha o workspace e localize o banco de dados KQL nele).
-1. No menu **…** da tabela **taxi-data** (que foi criada pelo fluxo de eventos), selecione **Tabela de consulta > Registros ingeridos nas últimas 24 horas**.
+1. Na barra de menus à esquerda, selecione **Criar**. Na página *Novo*, na seção *Inteligência em tempo real*, selecione **Eventhouse**. Dê um nome exclusivo de sua preferência.
 
-    ![Captura de tela do menu Tabela de consulta em um banco de dados KQL.](./images/kql-query.png)
+    >**Observação**: se a opção **Criar** não estiver fixada na barra lateral, você precisará selecionar a opção de reticências (**...**) primeiro.
 
-1. Veja os resultados da consulta: ela deverá ser uma consulta KQL como esta:
+    Feche todas as dicas ou prompts exibidos até ver o novo eventhouse vazio.
+
+    ![Captura de tela de um novo eventhouse](./images/create-eventhouse.png)
+
+1. No painel à esquerda, o eventhouse contém um banco de dados KQL com o mesmo nome do eventhouse. Você pode criar tabelas para seus dados em tempo real neste banco de dados ou criar bancos de dados adicionais conforme necessário.
+1. Selecione o banco de dados e observe que há um *queryset* associado. Esse arquivo contém algumas consultas KQL de exemplo que você pode usar para começar a consultar as tabelas em seu banco de dados.
+
+    No entanto, atualmente não há tabelas para consultar. Vamos resolver esse problema obtendo dados do eventstream em uma nova tabela.
+
+1. Na página principal do banco de dados KQL, selecione **Obter dados**.
+1. Para a fonte de dados, selecione **Eventstream** > **Eventstream existente**.
+1. No painel **Selecionar ou criar uma tabela de destino**, crie uma nova tabela chamada `taxi`. Em seguida, no painel **Configurar a fonte de dados**, selecione seu espaço de trabalho e o eventstream **taxi-data** e nomeie a conexão `taxi-table`.
+
+   ![Captura de tela da configuração para carregar uma tabela de um eventstream.](./images/configure-destination.png)
+
+1. Use o botão **Avançar** para concluir as etapas para inspecionar os dados e, em seguida, concluir a configuração. Em seguida, feche a janela de configuração para ver seu eventhouse com a tabela de ações.
+
+   ![Captura de tela de um eventhouse com uma tabela.](./images/eventhouse-with-table.png)
+
+    A conexão entre o fluxo e a tabela foi criada. Vamos verificar isso no eventstream.
+
+1. Na barra de menus à esquerda, selecione o hub em **tempo real** e exiba a página **Meus fluxos de dados**. No menu **...** do fluxo **taxi-data-stream**, selecione **Abrir eventstream**.
+
+    O eventstream agora mostra um destino para o fluxo:
+
+   ![Captura de tela de um eventstream com um destino.](./images/eventstream-destination.png)
+
+    > **Dica**: selecione o destino na tela de design e, se nenhuma visualização de dados for mostrada abaixo dele, selecione **Atualizar**.
+
+    Neste exercício, você criou um eventstream muito simples que captura dados em tempo real e os carrega em uma tabela. Em uma solução real, você normalmente adicionaria transformações para agregar os dados em janelas temporais (por exemplo, para capturar o preço médio de cada ação em períodos de cinco minutos).
+
+    Agora vamos explorar como você pode consultar e analisar os dados capturados.
+
+## Consultar os dados capturados
+
+O eventstream captura dados de tarifas de táxi em tempo real e os carrega em uma tabela no seu banco de dados KQL. Você pode consultar esta tabela para ver os dados capturados.
+
+1. Na barra de menus à esquerda, selecione o banco de dados da sua casa de eventos.
+1. Selecione o *queryset* do banco de dados.
+1. No painel de consulta, modifique a primeira consulta de exemplo, conforme mostrado aqui:
 
     ```kql
-    ['taxi-data']
-    | where ingestion_time() between (now(-1d) .. now())
+    taxi
+    | take 100
     ```
 
-    Os resultados mostram todos os registros de táxis ingeridos da fonte de streaming nas últimas 24 horas.
+1. Selecione o código de consulta e execute-o para ver 100 linhas de dados na tabela.
 
-1. Substitua todo o código da consulta KQL na metade superior do editor de consultas pelo seguinte código:
+    ![Captura de tela de uma consulta KQL.](./images/kql-stock-query.png)
+
+1. Revise os resultados e modifique a consulta para mostrar o número de embarques em táxis em cada hora:
 
     ```kql
-    // This query returns the number of taxi pickups per hour
-    ['taxi-data']
+    taxi
     | summarize PickupCount = count() by bin(todatetime(tpep_pickup_datetime), 1h)
     ```
 
-1. Use o botão **&#9655; Executar** para executar a consulta e analisar os resultados, que mostram o número de embarques em táxis em cada hora.
+1. Realce a consulta modificada e execute-a para ver os resultados.
+1. Aguarde alguns segundos e execute-a novamente, observando que o número de embarques muda à medida que novos dados são adicionados à tabela a partir do fluxo em tempo real.
 
 ## Limpar os recursos
 
-Se você terminou de explorar a análise em tempo real no Microsoft Fabric, exclua o workspace criado para este exercício.
+Neste exercício, você criou um eventhouse, ingeriu dados em tempo real usando um eventstream, consultou os dados ingeridos em uma tabela de banco de dados KQL, criou um painel em tempo real para visualizar os dados em tempo real e configurou um alerta usando o Ativador.
 
-1. Na barra à esquerda, selecione o ícone do workspace para ver todos os itens que ele contém.
-2. No menu **…** da barra de ferramentas, selecione **Configurações do workspace**.
-3. Na seção **Outros**, selecione **Remover este workspace**.
+Se você terminou de explorar a Inteligêmcia em tempo real no Fabric, exclua o workspace criado para este exercício.
+
+1. Na barra à esquerda, selecione o ícone do seu workspace.
+2. Na barra de ferramentas, selecione **Configurações do espaço de trabalho**.
+3. Na seção **Geral**, selecione **Remover este espaço de trabalho**.
