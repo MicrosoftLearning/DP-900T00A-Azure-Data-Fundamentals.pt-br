@@ -42,7 +42,7 @@ Agora que você tem uma conta de armazenamento do Azure, pode criar um contêine
     *Se o arquivo JSON for exibido no navegador, salve a página como **product1.json**.*
 
 1. Na página do portal do Azure para seu contêiner de armazenamento, no lado esquerdo, na seção **Armazenamento de dados**, selecione **Contêineres**.
-1. Na página **Contêineres**, selecione **&#65291; Contêiner** e adicione um contêiner chamado **dados** com um nível de acesso público **Privado (sem acesso anônimo)** .
+1. Na página **Contêineres**, selecione **&#65291; Contêiner** e adicione um contêiner chamado **dados** com um nível de acesso anônimo **Privado (sem acesso anônimo)** .
 1. Quando o contêiner de **dados** for criado, verifique se ele está listado na página **Contêineres**.
 1. No painel do lado esquerdo, na seção superior, selecione **Navegador de armazenamento**. Esta página fornece uma interface baseada em navegador que você pode usar para trabalhar com os dados em sua conta de armazenamento.
 1. Na página do navegador de armazenamento, selecione **Contêineres de blob** e verifique se seu contêiner de **dados** está listado.
@@ -66,7 +66,7 @@ Agora que você tem uma conta de armazenamento do Azure, pode criar um contêine
 
 O suporte do Azure Data Lake Store Gen2 permite que você use pastas hierárquicas para organizar e gerenciar o acesso a blobs. Ele também permite que você use o armazenamento de blobs do Azure para hospedar sistemas de arquivos distribuídos para plataformas comuns de análise de Big Data.
 
-1. Baixe o arquivo JSON [product2.json](https://aka.ms/product2.json?azure-portal=true) de `https://aka.ms/product2.json` e salve-o em seu computador na mesma pasta em que você baixou o **product1.json** anteriormente, ele será carregado no armazenamento de blobs mais adiante).
+1. Baixe o arquivo JSON [product2.json](https://aka.ms/product2.json?azure-portal=true) em `https://aka.ms/product2.json` e salve-o em seu computador na mesma pasta em que você baixou o **product1.json** anteriormente, ele será carregado no armazenamento de blobs mais adiante.
 1. Na página do portal do Azure da conta de armazenamento, no lado esquerdo, role para baixo até a seção **Configurações** e selecione **Atualização do Data Lake Gen2**.
 1. Na página **Atualização do Data Lake Gen2**, expanda e conclua cada etapa para atualizar a conta de armazenamento a fim de habilitar o namespace hierárquico e dar suporte ao Azure Data Lake Storage Gen 2. Isso pode levar algum tempo.
 1. Quando a atualização estiver concluída, no painel à esquerda, na seção superior, selecione **Navegador de armazenamento** e volte à raiz do contêiner de blobs **dados**, que ainda contém a pasta **product_data**.
@@ -85,6 +85,7 @@ O Armazenamento de Arquivos do Azure fornece uma maneira de criar compartilhamen
 
 1. Na página do portal do Azure para seu contêiner de armazenamento, no lado esquerdo, na seção **Armazenamento de dados**, selecione **Compartilhamentos de arquivos**.
 1. Na página Compartilhamentos de arquivos, selecione **&#65291; Compartilhamento de arquivos** e inclua um compartilhamento de arquivos chamado **arquivos** usando a camada **Transação otimizada**.
+2. Selecione **Avançar: Backup >** e desative o backup. Em seguida, selecione **Examinar + criar**.
 1. Nos **Compartilhamentos de arquivos**, abra o compartilhamento de novos **arquivos**.
 1. Na parte superior da página, selecione **Conectar**. Em seguida, no painel **Conectar**, observe que há guias para sistemas operacionais comuns (Windows, Linux e macOS) que contêm scripts que você pode executar para se conectar à pasta compartilhada a partir de um computador cliente.
 1. Feche o painel **Conectar** e, em seguida, feche a página de **arquivos** para retornar à página **Compartilhamentos de arquivos** para sua conta de armazenamento do Azure.
