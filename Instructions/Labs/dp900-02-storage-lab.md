@@ -19,7 +19,7 @@ Este laboratório levará aproximadamente **15** minutos para ser concluído.
 A primeira etapa ao usar o Armazenamento do Azure é provisionar uma conta do Armazenamento do Azure em sua assinatura do Azure.
 
 1. Se você ainda não tiver feito isso, entre no [portal do Azure](https://portal.azure.com?azure-portal=true).
-1. Na home page do portal do Azure, selecione **&#65291; Criar recurso** no canto superior esquerdo e pesquise a *conta de armazenamento*. Em seguida, na página **Conta de armazenamento** resultante, selecione **Criar**.
+1. Na home page do portal do Azure, selecione **&#65291; Criar recurso** no canto superior esquerdo e pesquise por `Storage account`. Em seguida, na página **Conta de armazenamento** resultante, selecione **Criar**.
 1. Insira os seguintes valores na página **Criar conta de armazenamento**:
     - **Assinatura**: Selecione sua assinatura do Azure.
     - **Grupo de recursos**: crie um grupo de recursos com um nome de sua escolha.
@@ -42,19 +42,19 @@ Agora que você tem uma conta de armazenamento do Azure, pode criar um contêine
     *Se o arquivo JSON for exibido no navegador, salve a página como **product1.json**.*
 
 1. Na página do portal do Azure para seu contêiner de armazenamento, no lado esquerdo, na seção **Armazenamento de dados**, selecione **Contêineres**.
-1. Na página **Contêineres**, selecione **&#65291; Contêiner** e adicione um contêiner chamado **dados** com um nível de acesso anônimo **Privado (sem acesso anônimo)** .
+1. Na página **Contêineres**, selecione **&#65291; Contêiner** e adicione um novo contêiner chamado `data` com um nível de acesso anônimo de **Privado (sem acesso anônimo)**.
 1. Quando o contêiner de **dados** for criado, verifique se ele está listado na página **Contêineres**.
 1. No painel do lado esquerdo, na seção superior, selecione **Navegador de armazenamento**. Esta página fornece uma interface baseada em navegador que você pode usar para trabalhar com os dados em sua conta de armazenamento.
 1. Na página do navegador de armazenamento, selecione **Contêineres de blob** e verifique se seu contêiner de **dados** está listado.
 1. Selecione o contêiner de **dados** e observe que ele está vazio.
-1. Selecione **&#65291; Adicionar diretório** e leia as informações sobre pastas antes de criar um diretório chamado **produtos**.
+1. Selecione **&#65291; Adicionar diretório** e leia as informações sobre pastas antes de criar um diretório chamado `products`.
 1. No navegador do armazenamento, verifique se o modo de exibição atual mostra o conteúdo da pasta **produtos** recém-criada. Observe que as "trilhas de navegação" na parte superior da página refletem o caminho **Contêineres de blobs > dados > produtos**.
 1. Nas trilhas, selecione **dados** para alternar para o contêiner de **dados** e observe que ele <u>não</u> contém uma pasta chamada **produtos**.
 
     As pastas no armazenamento de blob são virtuais e existem apenas como parte do caminho de um blob. Como a pasta de **produtos** não continha blobs, ela não está realmente lá!
 
 1. Use o botão **&#10514; Carregar** para abrir o painel **Carregar blob**.
-1. No painel **Carregar blob**, selecione o arquivo **product1.json** que você salvou em seu computador local anteriormente. Em seguida, na seção **Avançado**, na caixa **Carregar na pasta**, insira **product_data** e selecione o botão **Carregar**.
+1. No painel **Carregar blob**, selecione o arquivo **product1.json** que você salvou em seu computador local anteriormente. Em seguida, na seção **Avançado**, na caixa **Carregar na pasta**, digite `product_data` e clique no botão **Carregar**.
 1. Feche o painel **Carregar blob** se ainda estiver aberto e verifique se uma pasta virtual **product_data** foi criada no contêiner de **dados**.
 1. Selecione a pasta **product_data** e verifique se ela contém o blob **product1.json** que você carregou.
 1. No lado esquerdo, na seção **Armazenamento de dados**, selecione **Contêineres**.
@@ -84,7 +84,7 @@ O suporte do Azure Data Lake Store Gen2 permite que você use pastas hierárquic
 O Armazenamento de Arquivos do Azure fornece uma maneira de criar compartilhamentos de arquivos baseados em nuvem.
 
 1. Na página do portal do Azure para seu contêiner de armazenamento, no lado esquerdo, na seção **Armazenamento de dados**, selecione **Compartilhamentos de arquivos**.
-1. Na página Compartilhamentos de arquivos, selecione **&#65291; Compartilhamento de arquivos** e inclua um compartilhamento de arquivos chamado **arquivos** usando a camada **Transação otimizada**.
+1. Na página Compartilhamentos de arquivo, selecione **&#65291; Compartilhamento de arquivos** e adicione um novo compartilhamento de arquivo chamado `files` usando o nível **Otimizado para transações**.
 2. Selecione **Avançar: Backup >** e desative o backup. Em seguida, selecione **Examinar + criar**.
 1. Nos **Compartilhamentos de arquivos**, abra o compartilhamento de novos **arquivos**.
 1. Na parte superior da página, selecione **Conectar**. Em seguida, no painel **Conectar**, observe que há guias para sistemas operacionais comuns (Windows, Linux e macOS) que contêm scripts que você pode executar para se conectar à pasta compartilhada a partir de um computador cliente.
@@ -95,7 +95,7 @@ O Armazenamento de Arquivos do Azure fornece uma maneira de criar compartilhamen
 O Tabelas do Azure fornece um armazenamento de chave/valor para aplicativos que precisam armazenar valores de dados, mas não precisam da funcionalidade completa e da estrutura de um banco de dados relacional.
 
 1. Na página do portal do Azure para seu contêiner de armazenamento, no lado esquerdo, na seção **Armazenamento de dados**, selecione **Tabelas**.
-1. Na página **Tabelas**, selecione **&#65291; Tabela** e crie uma tabela chamada **produtos**.
+1. Na página **Tabelas**, selecione **&#65291; Tabela** e crie uma tabela chamada `products`.
 1. Após a criação da tabela **produtos**, no painel à esquerda, na seção superior, selecione **Navegador de armazenamento**.
 1. No gerenciador de armazenamento, selecione **Tabelas** e verifique se a tabela de **produtos** está listada.
 1. Selecione a tabela de **produtos**.

@@ -18,7 +18,7 @@ Este laboratório levará aproximadamente **5** minutos para ser concluído.
 
 Neste exercício, você provisionará um recurso do Banco de Dados do Azure para MySQL.
 
-1. No portal do Azure, selecione **&#65291; Criar recurso** no canto superior esquerdo e pesquise *Banco de Dados do Azure para MySQL*. Então, na página resultante do **Banco de Dados do Azure para MySQL**, escolha **Criar**.
+1. No portal do Azure, selecione **&#65291; Criar um recurso** no canto superior esquerdo e pesquise por `Azure Database for MySQL`. Então, na página resultante do **Banco de Dados do Azure para MySQL**, escolha **Criar**.
 
 1. Examine as opções de Banco de Dados do Azure para MySQL disponíveis. Em seguida, no **Tipo de recurso**, selecione **Servidor Flexível** e selecione **Criar**.
 
