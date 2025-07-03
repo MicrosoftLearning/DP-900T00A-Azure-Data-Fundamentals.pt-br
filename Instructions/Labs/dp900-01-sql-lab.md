@@ -16,7 +16,7 @@ Este laboratório levará aproximadamente **15** minutos para ser concluído.
 
 ## Provisionar um recurso do Banco de Dados SQL do Azure
 
-1. No [Portal do Azure](https://portal.azure.com?azure-portal=true), selecione **&#65291; Criar recurso** no canto superior esquerdo e pesquise *SQL do Azure*. Em seguida, na página **SQL do Azure** resultante, selecione **Criar**.
+1. No [Portal do Azure](https://portal.azure.com?azure-portal=true), selecione **&#65291; Criar recurso** no canto superior esquerdo e pesquise `Azure SQL`. Em seguida, na página **SQL do Azure** resultante, selecione **Criar**.
 
 1. Examine as opções de SQL do Azure que estão disponíveis e, em seguida, no bloco **Bancos de dados SQL**, verifique se a opção **Banco de dados individual** está selecionada e escolha **Criar**.
 
@@ -25,7 +25,7 @@ Este laboratório levará aproximadamente **15** minutos para ser concluído.
 1. Insira os seguintes valores na página **Criar Banco de Dados SQL** e deixe todas as outras propriedades com a configuração padrão:
     - **Assinatura**: Selecione sua assinatura do Azure.
     - **Grupo de recursos**: crie um grupo de recursos com um nome de sua escolha.
-    - **Nome do banco de dados**: *AdventureWorks*
+    - **Nome do banco de dados**: `AdventureWorks`
     - **Servidor**: selecione **Criar novo** e crie um servidor com um nome exclusivo em qualquer local disponível. Use **Autenticação de SQL** e especifique seu nome como o logon de administrador do servidor e uma senha devidamente complexa (lembre-se da senha, você precisará dela mais tarde).
     - **Deseja usar o pool elástico do SQL?**: *Não*
     - **Ambiente de carga de trabalho**: desenvolvimento
@@ -46,7 +46,7 @@ Este laboratório levará aproximadamente **15** minutos para ser concluído.
 
 1. No painel no lado esquerdo da página, selecione **Editor de consultas (versão prévia)** e, em seguida, entre usando as credenciais de administrador e a senha que você especificou para o servidor.
     
-    *Se uma mensagem de erro informando que o endereço IP do cliente não é permitido for exibida, selecione o link IP **Incluir na lista de permitidos o IP...** no final da mensagem para permitir o acesso e tente entrar novamente (anteriormente você adicionou o endereço IP de cliente do seu computador às regras de firewall, mas o editor de consultas pode se conectar por meio de um endereço diferente, dependendo da configuração da rede)*.
+    >exibida **Observação**: se uma mensagem de erro for exibida informando que o endereço IP do cliente não é permitido, clique no link **Incluir na lista de permitidos o IP...** no final da mensagem para permitir o acesso e tente entrar novamente (anteriormente você adicionou o endereço IP de cliente do seu computador às regras de firewall, mas o editor de consultas pode se conectar por meio de um endereço diferente, dependendo da configuração da rede).
     
     O editor de consultas tem essa aparência:
     
@@ -57,7 +57,7 @@ Este laboratório levará aproximadamente **15** minutos para ser concluído.
 1. No painel **Consulta 1**, insira a seguinte instrução SQL:
 
     ```sql
-    SELECT * FROM SalesLT.Product;
+   SELECT * FROM SalesLT.Product;
     ```
 
 1. Selecione **&#9655; Executar** acima da consulta para executá-la e visualizar os resultados, que devem incluir todas as colunas de todas as linhas na tabela **SalesLT.Product**, conforme mostrado abaixo:
@@ -67,18 +67,18 @@ Este laboratório levará aproximadamente **15** minutos para ser concluído.
 1. Substitua a instrução SELECT pelo seguinte código e selecione **&#9655; Executar** para executar a nova consulta e revisar os resultados (que incluem somente as colunas **ProductID**, **Name**, **ListPrice** e **ProductCategoryID**):
 
     ```sql
-    SELECT ProductID, Name, ListPrice, ProductCategoryID
-    FROM SalesLT.Product;
+   SELECT ProductID, Name, ListPrice, ProductCategoryID
+   FROM SalesLT.Product;
     ```
 
 1. Agora, experimente a seguinte consulta, que usa uma JOIN para obter o nome da categoria da tabela **SalesLT.ProductCategory**:
 
     ```sql
-    SELECT p.ProductID, p.Name AS ProductName,
-            c.Name AS Category, p.ListPrice
-    FROM SalesLT.Product AS p
-    JOIN [SalesLT].[ProductCategory] AS c
-        ON p.ProductCategoryID = c.ProductCategoryID;
+   SELECT p.ProductID, p.Name AS ProductName,
+           c.Name AS Category, p.ListPrice
+   FROM SalesLT.Product AS p
+   JOIN [SalesLT].[ProductCategory] AS c
+       ON p.ProductCategoryID = c.ProductCategoryID;
     ```
 
 1. Feche o painel do editor de consultas, descartando suas edições.
