@@ -68,7 +68,7 @@ Uma forma simples de ingerir dados é usar uma atividade **Copiar Dados** em um 
 
     ![Captura de tela de um pipeline com uma atividade Copiar Dados.](./images/copy-data-pipeline.png)
 
-    Quando o pipeline começar a ser executado, você poderá monitorar o status dele no painel **Saída** no designer de pipeline. Use o ícone **&#8635;** (*Atualizar*) para atualizar o status e aguarde até a finalização (que pode demorar dez minutos ou mais).
+    Quando o pipeline começar a ser executado, você poderá monitorar o status dele no painel **Saída** no designer de pipeline. Use o ícone **&#8635;** (*Atualizar*) para atualizar o status e aguarde até a finalização (que pode levar dez minutos ou mais).
 
 1. Na barra de menus do hub à esquerda, selecione o lakehouse.
 1. Na **Página Inicial**, no painel **Lakehouse Explorer** , no menu **...** do nó **Tabelas**, clique em **Atualizar** e expanda **Tabelas** para confirmar se a tabela **taxi_rides** foi criada.
