@@ -34,7 +34,7 @@ Para usar o Azure Synapse Analytics, você precisa provisionar um recurso de wor
         - Leste dos EUA 2
         - Norte da Europa
         - Centro-Sul dos Estados Unidos
-        - Sudeste Asiático
+        - Sudeste da Ásia
         - Sul do Reino Unido
         - Europa Ocidental
         - Oeste dos EUA
@@ -139,8 +139,8 @@ Agora que você já ingeriu alguns dados no seu workspace, use o Synapse Analyti
     | C1 | c2 | c3 | c4 |
     | -- | -- | -- | -- |
     | ProductID | ProductName | Categoria | ListPrice |
-    | 771 | Mountain-100 Silver, 38 | Mountain bikes | 3399.9900 |
-    | 772 | Mountain-100 Silver, 42 | Mountain bikes | 3399.9900 |
+    | 771 | Mountain-100 Silver, 38 | Mountain Bikes | 3399.9900 |
+    | 772 | Mountain-100 Silver, 42 | Mountain Bikes | 3399.9900 |
     | ... | ... | ... | ... |
 
 5. Observe que os resultados consistem em quatro colunas chamadas C1, C2, C3 e C4; e que a primeira linha nos resultados contém os nomes dos campos de dados. Para corrigir esse problema, adicione um parâmetro HEADER_ROW = TRUE à função OPENROWSET conforme mostrado aqui (substituindo *datalakexx* e *fsxx* pelos nomes da sua conta de armazenamento do data lake e do sistema de arquivos) e execute novamente a consulta:
@@ -161,8 +161,8 @@ Agora que você já ingeriu alguns dados no seu workspace, use o Synapse Analyti
 
     | ProductID | ProductName | Categoria | ListPrice |
     | -- | -- | -- | -- |
-    | 771 | Mountain-100 Silver, 38 | Mountain bikes | 3399.9900 |
-    | 772 | Mountain-100 Silver, 42 | Mountain bikes | 3399.9900 |
+    | 771 | Mountain-100 Silver, 38 | Mountain Bikes | 3399.9900 |
+    | 772 | Mountain-100 Silver, 42 | Mountain Bikes | 3399.9900 |
     | ... | ... | ... | ... |
 
 6. Modifique a consulta da seguinte maneira (substituindo *datalakexx* e *fsxx* pelos nomes da conta de armazenamento do data lake e do sistema de arquivos):
@@ -185,7 +185,7 @@ Agora que você já ingeriu alguns dados no seu workspace, use o Synapse Analyti
     | Categoria | ProductCount |
     | -- | -- |
     | Bib Shorts | 3 |
-    | Racks de bicicleta | 1 |
+    | Porta-bicicletas | 1 |
     | ... | ... |
 
 8. No painel **Propriedades** do **Script SQL 1**, altere o **Nome** para `Count Products by Category`. Em seguida, na barra de ferramentas, selecione **Publicar** para salvar o script.
@@ -244,8 +244,8 @@ Embora a linguagem SQL seja comum para a consulta de conjuntos de dados estrutur
     | _c0_ | _c1_ | _c2_ | _c3_ |
     | -- | -- | -- | -- |
     | ProductID | ProductName | Categoria | ListPrice |
-    | 771 | Mountain-100 Silver, 38 | Mountain bikes | 3399.9900 |
-    | 772 | Mountain-100 Silver, 42 | Mountain bikes | 3399.9900 |
+    | 771 | Mountain-100 Silver, 38 | Mountain Bikes | 3399.9900 |
+    | 772 | Mountain-100 Silver, 42 | Mountain Bikes | 3399.9900 |
     | ... | ... | ... | ... |
 
 9. Descompacte a linha *header=True* (porque o arquivo products.csv tem os títulos de coluna na primeira linha), para que seu código tenha esta aparência:
@@ -263,8 +263,8 @@ Embora a linguagem SQL seja comum para a consulta de conjuntos de dados estrutur
 
     | ProductID | ProductName | Categoria | ListPrice |
     | -- | -- | -- | -- |
-    | 771 | Mountain-100 Silver, 38 | Mountain bikes | 3399.9900 |
-    | 772 | Mountain-100 Silver, 42 | Mountain bikes | 3399.9900 |
+    | 771 | Mountain-100 Silver, 38 | Mountain Bikes | 3399.9900 |
+    | 772 | Mountain-100 Silver, 42 | Mountain Bikes | 3399.9900 |
     | ... | ... | ... | ... |
 
     Observe que executar a célula novamente leva menos tempo, porque o pool do Spark já foi iniciado.
@@ -282,7 +282,7 @@ Embora a linguagem SQL seja comum para a consulta de conjuntos de dados estrutur
     | Categoria | count |
     | -- | -- |
     | Fones de ouvido | 3 |
-    | Rodas | 14 |
+    | Wheels | 14 |
     | ... | ... |
 
 14. Na saída dos resultados da célula, selecione o modo de exibição de **Gráfico.** O gráfico resultante deve ser semelhante a este:
