@@ -41,7 +41,7 @@ A primeira etapa ao usar o Armazenamento do Azure é provisionar uma conta do Ar
 
     > _**Dica**: um novo grupo de recursos facilita a limpeza. Standard + LRS é a linha de base de menor custo, boa para fins de aprendizado. O LRS mantém três cópias síncronas em uma região, o que é adequado para dados de demonstração não críticos sem pagar pela replicação geográfica._
 
-1. Selecione **Avançar: Avançado >** e veja as opções de configuração avançada. Em particular, observe que é aqui que você pode habilitar o namespace hierárquico para dar suporte ao Azure Data Lake Storage Gen2. Deixe essa opção **<u>desmarcada</u>** (ela será habilitada posteriormente) e selecione **Avançar: Rede >** para visualizar as opções de rede da conta de armazenamento.
+1. Selecione **Avançar: Avançado >** e veja as opções de configuração avançada. Em particular, observe que é aqui que você pode habilitar o namespace hierárquico para dar suporte ao Azure Data Lake Storage Gen2. Deixe essa opção **<u>desmarcada</u>** (você a habilitará mais tarde) e selecione **Avançar: Rede >** para exibir as opções de rede de sua conta de armazenamento.
    
    ![Captura de tela do Portal do Azure mostrando a segunda página para criar uma conta de armazenamento](images/storage-page2.png)
 
@@ -61,63 +61,63 @@ Agora que você tem uma conta de armazenamento do Azure, pode criar um contêine
 
 1. Baixe o arquivo JSON [product1.json](https://aka.ms/product1.json?azure-portal=true) de `https://aka.ms/product1.json` e salve-o em seu computador (você pode salvá-lo em qualquer pasta, ele será carregado no armazenamento de blobs posteriormente).
 
-    *Se o arquivo JSON for exibido no navegador, salve a página como **product1.json**.*
+    *Se o arquivo JSON for exibido no navegador, clique com o botão direito do mouse na página e selecione **Salvar como**. Nomeie o arquivo  **product1.json** e armazene-o na pasta de downloads.* 
 
-1. Na página do portal do Azure para seu contêiner de armazenamento, no lado esquerdo, na seção **Armazenamento de dados**, selecione **Contêineres**.
+2. Na página do portal do Azure para seu contêiner de armazenamento, no lado esquerdo, na seção **Armazenamento de dados**, selecione **Contêineres**.
    
     ![Captura de tela do Portal do Azure mostrando as opções de menu de uma conta de armazenamento](images/storage-menu-containers.png)
 
-1. Na página **Contêineres**, selecione **&#65291; Adicionar contêiner** e adicione um novo contêiner chamado `data` com um nível de acesso anônimo **Privado (sem acesso anônimo)**.
+3. Na página **Contêineres**, selecione **&#65291; Adicionar contêiner** e adicione um novo contêiner chamado `data` com um nível de acesso anônimo **Privado (sem acesso anônimo)**.
 
     ![Captura de tela do Portal do Azure mostrando um novo contêiner para uma conta de armazenamento](images/storage-new-container.png)
 
     > _**Dica**: o nível Privado mantém os dados da amostra seguros. O acesso público raramente é necessário, exceto para cenários de dados abertos ou sites estáticos. Nomeá-lo `data` mantém a amostra simples e legível._
 
-1. Quando o contêiner de **dados** for criado, verifique se ele está listado na página **Contêineres**.
+4. Quando o contêiner de **dados** for criado, verifique se ele está listado na página **Contêineres**.
 
-1. No painel do lado esquerdo, na seção superior, selecione **Navegador de armazenamento**. Esta página fornece uma interface baseada em navegador que você pode usar para trabalhar com os dados em sua conta de armazenamento.
+5. No painel do lado esquerdo, na seção superior, selecione **Navegador de armazenamento**. Esta página fornece uma interface baseada em navegador que você pode usar para trabalhar com os dados em sua conta de armazenamento.
 
-1. Na página do navegador de armazenamento, selecione **Contêineres de blob** e verifique se seu contêiner de **dados** está listado.
+6. Na página do navegador de armazenamento, selecione **Contêineres de blob** e verifique se seu contêiner de **dados** está listado.
 
-1. Selecione o contêiner de **dados** e observe que ele está vazio.
+7. Selecione o contêiner de **dados** e observe que ele está vazio.
 
     ![Captura de tela do Portal do Azure mostrando o navegador de armazenamento](images/storage-browser-empty.png)
 
-1. Selecione **&#65291; Adicionar diretório** e leia as informações sobre pastas antes de criar um diretório chamado `products`.
+8. Selecione **&#65291; Adicionar diretório** e leia as informações sobre pastas antes de criar um diretório chamado `products`.
 
-1. No navegador do armazenamento, verifique se o modo de exibição atual mostra o conteúdo da pasta **produtos** recém-criada. Observe que as "trilhas de navegação" na parte superior da página refletem o caminho **Contêineres de blobs > dados > produtos**.
+9. No navegador do armazenamento, verifique se o modo de exibição atual mostra o conteúdo da pasta **produtos** recém-criada. Observe que as "trilhas de navegação" na parte superior da página refletem o caminho **Contêineres de blobs > dados > produtos**.
 
     ![Captura de tela do Portal do Azure mostrando a trilha do navegador de armazenamento](images/storage-breadcrumb.png)
 
-1. Nas trilhas, selecione **dados** para alternar para o contêiner de **dados** e observe que ele <u>não</u> contém uma pasta chamada **produtos**.
+10. Nas trilhas, selecione **dados** para alternar para o contêiner de **dados** e observe que ele <u>não</u> contém uma pasta chamada **produtos**.
 
     As pastas no armazenamento de blob são virtuais e existem apenas como parte do caminho de um blob. Como a pasta de **produtos** não continha blobs, ela não está realmente lá!
 
     > _**Dica**: um namespace simples significa que diretórios são apenas prefixos de nome (produtos/file.json). Esse design permite uma grande escala porque o serviço indexa nomes de blob em vez de manter uma estrutura de árvore verdadeira._
 
-1. Use o botão **&#10514; Carregar** para abrir o painel **Carregar blob**.
+11. Use o botão **&#10514; Carregar** para abrir o painel **Carregar blob**.
 
-1. No painel **Carregar blob**, selecione o arquivo **product1.json** que você salvou em seu computador local anteriormente. Em seguida, na seção **Avançado**, na caixa **Carregar na pasta**, digite `product_data` e clique no botão **Carregar**.
+12. No painel **Carregar blob**, selecione o arquivo **product1.json** que você salvou em seu computador local anteriormente. Em seguida, na seção **Avançado**, na caixa **Carregar na pasta**, digite `product_data` e clique no botão **Carregar**.
 
     ![Captura de tela do Portal do Azure mostrando a opção de carregar um blob](images/storage-upload-blob.png)
 
     > _**Dica**: fornecer um nome de pasta ao carregar cria automaticamente o caminho virtual, ilustrando que a presença de um blob faz com que a "pasta" apareça._
 
-1. Feche o painel **Carregar blob** se ainda estiver aberto e verifique se uma pasta virtual **product_data** foi criada no contêiner de **dados**.
+13. Feche o painel **Carregar blob** se ainda estiver aberto e verifique se uma pasta virtual **product_data** foi criada no contêiner de **dados**.
 
-1. Selecione a pasta **product_data** e verifique se ela contém o blob **product1.json** que você carregou.
+14. Selecione a pasta **product_data** e verifique se ela contém o blob **product1.json** que você carregou.
 
-1. No lado esquerdo, na seção **Armazenamento de dados**, selecione **Contêineres**.
+15. No lado esquerdo, na seção **Armazenamento de dados**, selecione **Contêineres**.
 
-1. Abra o contêiner de **dados** e verifique se a pasta **product_data** que você criou está listada.
+16. Abra o contêiner de **dados** e verifique se a pasta **product_data** que você criou está listada.
 
-1. Selecione o ícone **&#x2027;&#x2027;&#x2027;** na extremidade direita da pasta e observe que nenhuma opção é exibida. As pastas em um contêiner de blobs de namespace simples são virtuais e não podem ser gerenciadas.
+17. Selecione o ícone **&#x2027;&#x2027;&#x2027;** na extremidade direita da pasta e observe que nenhuma opção é exibida no menu. As pastas em um contêiner de blobs de namespace simples são virtuais e não podem ser gerenciadas.
 
     ![Captura de tela do Portal do Azure mostrando as opções para a pasta virtual](images/storage-virtual-folder.png)
 
     > _**Dica**: não existe nenhum objeto de diretório real, portanto, não há operações de renomeação/permissão — que exijam um namespace hierárquico._
 
-1. Use o ícone **X** no canto superior direito da página de **dados** para fechar a página e retornar à página **Contêineres**.
+18. Use o ícone **X** no canto superior direito da página de **dados** para fechar a página e retornar à página **Contêineres**.
 
 ## Explorar Azure Data Lake Storage Gen2
 
