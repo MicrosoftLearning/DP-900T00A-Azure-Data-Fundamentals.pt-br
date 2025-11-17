@@ -1,3 +1,4 @@
+**⚠️ This GitHub repo will retire on 28th November 2025.** 
 # Fundamentos de dados do Microsoft Azure
 
 Este repositório contém os exercícios práticos de laboratório do curso da Microsoft [DP-900 *Microsoft Azure Data Fundamentals*](https://docs.microsoft.com/en-us/learn/certifications/courses/dp-900t00) e dos [módulos individuais do Microsoft Learn](https://docs.microsoft.com/en-us/users/23110622/collections/0kjyh8rn5gdrjj/). Os laboratórios foram pensados para acompanhar os materiais de aprendizado e para você praticar o uso das tecnologias descritas. 
